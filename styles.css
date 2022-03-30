@@ -1,0 +1,29 @@
+/* RESET */
+* {
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    --blk: rgb(30, 32, 33);
+    --wht: rgb(255, 255, 255);
+    --gry: rgb(232, 234, 233);
+    --blu: rgb(36, 173, 227);
+}
+
+
+/* GLOBAL */
+#header {
+    height: 200px;
+    background-color: var(--blk);
+}
+
+.nav-ul {
+    list-style: none;
+}
+/* Home */
+
+
+/* Projects */
