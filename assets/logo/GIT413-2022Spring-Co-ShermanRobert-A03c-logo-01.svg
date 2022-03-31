@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 758.38 121.25" style="enable-background:new 0 0 758.38 121.25;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#1FACE3;}
+	.st1{fill:#E7E8E8;}
+</style>
+<g id="First_Name">
+	<circle id="o" class="st0" cx="90.2" cy="57.53" r="26"/>
+	<g id="b_-1">
+		<rect x="126.03" y="0.05" class="st1" width="20.19" height="83.48"/>
+		<circle class="st0" cx="153.69" cy="57.5" r="26"/>
+	</g>
+	<g id="B">
+		<rect y="0.08" class="st1" width="20.19" height="83.48"/>
+		<g>
+			<circle class="st0" cx="28.38" cy="57.53" r="26"/>
+			<ellipse class="st0" cx="20.75" cy="17.18" rx="16.8" ry="16.8"/>
+		</g>
+	</g>
+	<g id="b_-_2">
+		<rect x="189.52" class="st1" width="20.19" height="83.5"/>
+		<circle class="st0" cx="217.17" cy="57.51" r="26"/>
+	</g>
+	<g id="y">
+		
+			<rect x="259.82" y="37.8" transform="matrix(0.866 0.5 -0.5 0.866 76.0677 -124.2633)" class="st1" width="20.19" height="84.02"/>
+		<polygon class="st0" points="275.98,84.33 261.57,59.36 247.15,34.39 275.98,34.39 304.81,34.39 290.4,59.36 		"/>
+	</g>
+</g>
+<g id="Last_Name">
+	<g id="S">
+		<path class="st0" d="M410.71,35.02c12.43,7.18,16.69,23.08,9.52,35.51s-23.08,16.69-35.51,9.52"/>
+		<path class="st0" d="M398.96,31.54c-8.06-4.65-10.82-14.95-6.16-23.01s14.95-10.82,23.01-6.16L398.96,31.54z"/>
+	</g>
+	<g id="a">
+		<rect x="692.29" y="31.51" class="st1" width="20.19" height="51.99"/>
+		<circle class="st0" cx="684.11" cy="57.56" r="26"/>
+	</g>
+	<g id="e">
+		<rect x="479.36" y="31.54" class="st1" width="20.19" height="52.02"/>
+		<g>
+			<path class="st0" d="M481.41,57.56c0-14.36,11.64-26,26-26c14.36,0,26,11.64,26,26"/>
+			<path class="st0" d="M481.41,66.71c0,9.3,7.54,16.84,16.84,16.84c9.3,0,16.84-7.54,16.84-16.84"/>
+		</g>
+	</g>
+	<g id="m">
+		<rect x="588.97" y="31.54" class="st1" width="20.19" height="52.02"/>
+		<g>
+			<path class="st0" d="M591.35,48.46c0-9.3,7.54-16.84,16.84-16.84c9.3,0,16.84,7.54,16.84,16.84"/>
+			<path class="st0" d="M614.6,48.46c0-9.3,7.54-16.84,16.84-16.84c9.3,0,16.84,7.54,16.84,16.84"/>
+			<rect x="591.35" y="48.46" class="st0" width="56.93" height="35.1"/>
+		</g>
+	</g>
+	<g id="r">
+		<rect x="543.23" y="31.56" class="st1" width="20.19" height="52"/>
+		
+			<rect x="550.23" y="28.68" transform="matrix(1.321699e-10 -1 1 1.321699e-10 516.6011 607.8141)" class="st0" width="23.95" height="33.85"/>
+	</g>
+	<g id="n">
+		<rect x="722.32" y="31.54" class="st1" width="20.19" height="51.99"/>
+		<g>
+			<path class="st0" d="M724.7,48.4c0-9.3,7.54-16.84,16.84-16.84s16.84,7.54,16.84,16.84"/>
+			<rect x="724.7" y="48.4" class="st0" width="33.68" height="35.1"/>
+		</g>
+	</g>
+	<g id="h">
+		<rect x="433.54" y="0.08" class="st1" width="20.19" height="83.45"/>
+		<g>
+			<path class="st0" d="M435.84,48.41c0-9.3,7.54-16.84,16.84-16.84c9.3,0,16.84,7.54,16.84,16.84"/>
+			<rect x="435.84" y="48.41" class="st0" width="33.68" height="35.1"/>
+		</g>
+	</g>
+</g>
+</svg>

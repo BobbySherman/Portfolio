@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
 /* RESET */
 * {
     margin: 0;
 	padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Open Sans", Verdana, sans-serif;
 }
 
 /* VARIABLES */
@@ -11,19 +16,85 @@
     --wht: rgb(255, 255, 255);
     --gry: rgb(232, 234, 233);
     --blu: rgb(36, 173, 227);
+
+    --reg: 400;
+    --semi: 600;
+    --bold: 700;
 }
 
 
 /* GLOBAL */
 #header {
-    height: 200px;
+    height: 100px;
     background-color: var(--blk);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
-.nav-ul {
-    list-style: none;
+.head-logo {
+    width: 300px;
 }
+
+.nav-li {
+    display: inline-block;
+}
+
+.nav-link {
+    color: var(--wht);
+    font-weight: var(--bold);
+    padding: 10px;
+}
+
+.nav-download {
+    background-color: var(--blu);
+}
+
+#footer {
+    background-color: var(--blk);
+    color: var(--wht);
+    height: 100px;
+    padding: 20px;
+}
+
+#footer ul li {
+    display: inline-block;
+}
+
+.footer-wrapper {
+    border-top: 2px solid var(--blu);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.fa-linkedin, .fa-github {
+    padding: 5px; /* adjust footer padding-right */
+    font-size: 200%;
+    color: var(--wht);
+}
+
 /* Home */
+#hm-main > section {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
+#about-section {
+    background-color: var(--blk);
+    color: var(--wht);
+}
+
+#work-section {
+    background-color: var(--blu);
+    color: var(--wht);
+}
+
+#contact-section {
+    background-color: var(--blk);
+    color: var(--wht);
+}
 
 /* Projects */
