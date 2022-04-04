@@ -24,17 +24,28 @@
 
 
 /* GLOBAL */
+body {
+    background-color: var(--blk);
+    padding-top: 50px;
+}
+
 #header {
     height: 100px;
     background-color: var(--blk);
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.header-wrapper {
+    border-bottom: 2px solid var(--blu);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding-bottom: 20px;
 }
 
 .head-logo {
-    width: 300px;
+    width: 350px;
 }
 
 .nav-li {
@@ -54,8 +65,7 @@
 #footer {
     background-color: var(--blk);
     color: var(--wht);
-    height: 100px;
-    padding: 20px;
+    padding: 0 70px;
 }
 
 #footer ul li {
@@ -67,7 +77,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .fa-linkedin, .fa-github {
@@ -76,25 +87,95 @@
     color: var(--wht);
 }
 
-/* Home */
+.button {
+    display: inline-block;
+    background-color: var(--blu);
+    padding: 10px;
+    width: 105px;
+    color: var(--wht);
+    font-weight: var(--bold);
+}
+
+p {
+    padding-bottom: 20px;
+    font-size: 110%;
+}
+
+h3 {
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 400%;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+/* Home - about-section*/
 #hm-main > section {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 #about-section {
+    min-height: 100vh;
     background-color: var(--blk);
     color: var(--wht);
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    gap: 30px;
+    align-items: start;
+    padding: 100px 50px;
 }
 
+.about-portrait {
+    width: 80%;
+    padding-top: 23px;
+}
+
+#about-section p {
+    max-width: 800px;
+}
+
+#about-section h2 {
+    padding-top: 0;
+    padding-bottom: 30px;
+}
+
+/* Home - work-section*/
 #work-section {
+    min-height: 100vh;
+    padding-bottom: 100px;
     background-color: var(--blu);
     color: var(--wht);
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-template-rows: 1fr 2fr 2fr;
+    gap: 30px;
 }
 
+#work-section > h2 {
+    grid-column: 1/4;
+}
+
+#work-section a img {
+    width: 100%;
+    height: 80%;
+}
+
+/* Home - contact-section*/
 #contact-section {
+    min-height: 75vh;
     background-color: var(--blk);
     color: var(--wht);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-/* Projects */
+
+/* Projects - 1 - */
+/* Projects - 2 - */
+/* Projects - 3 - */
+/* Projects - 4 - */
+/* Projects - 5 - */
