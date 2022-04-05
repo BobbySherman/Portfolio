@@ -8,6 +8,11 @@
     text-decoration: none;
     list-style: none;
     font-family: "Open Sans", Verdana, sans-serif;
+    color: var(--wht);
+}
+
+a {
+    display: inline-block;
 }
 
 /* VARIABLES */
@@ -37,7 +42,7 @@ body {
 }
 
 .header-wrapper {
-    border-bottom: 2px solid var(--blu);
+    border-bottom: 5px solid var(--blu);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,18 +58,32 @@ body {
 }
 
 .nav-link {
-    color: var(--wht);
     font-weight: var(--bold);
     padding: 10px;
 }
 
+.nav-link:hover {
+    color: var(--blu);
+    border: 1px solid var(--blu);
+}
+
 .nav-download {
     background-color: var(--blu);
+    border: 1px solid var(--blu);
+}
+
+.nav-download:hover {
+    color: var(--blu);
+    border: 1px solid var(--blu);
+    background-color: var(--blk);
+}
+
+.nav-ul > li {
+    margin-right: 20px;
 }
 
 #footer {
     background-color: var(--blk);
-    color: var(--wht);
     padding: 0 70px;
 }
 
@@ -73,7 +92,7 @@ body {
 }
 
 .footer-wrapper {
-    border-top: 2px solid var(--blu);
+    border-top: 5px solid var(--blu);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,16 +103,24 @@ body {
 .fa-linkedin, .fa-github {
     padding: 5px; /* adjust footer padding-right */
     font-size: 200%;
-    color: var(--wht);
+}
+
+.fa-linkedin:hover, .fa-github:hover {
+    color: var(--blu);
 }
 
 .button {
     display: inline-block;
     background-color: var(--blu);
     padding: 10px;
-    width: 105px;
-    color: var(--wht);
     font-weight: var(--bold);
+    border: 1px solid var(--blu);
+}
+
+.button:hover {
+    color: var(--blu);
+    border: 1px solid var(--blu);
+    background-color: var(--blk);
 }
 
 p {
@@ -101,18 +128,116 @@ p {
     font-size: 110%;
 }
 
-h3 {
-    padding-bottom: 10px;
+h1 {
+    font-size: 300%;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.h1-thin {
+    font-weight: var(--reg);
 }
 
 h2 {
     font-size: 400%;
     padding-top: 60px;
+}
+
+h3 {
+    padding-bottom: 10px;
+}
+
+.italic {
+    color: var(--gry);
+}
+
+.triangle { /* https://css-tricks.com/snippets/css/css-triangle/ | Chris Coyier on Oct 6, 2009 (Updated on Sep 29, 2016) */
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid var(--blu);
+    margin-bottom: 2px;
+}
+
+.underline-blu {
+    border-top: 5px solid var(--blu);
+    width: 80px;
+}
+
+.underline-blk {
+    border-top: 5px solid var(--blk);
+    width: 80px;
+}
+
+#hm-main .heading {
+    grid-area: 1 / 1 / 2 / 4;
     padding-bottom: 50px;
 }
 
+#project-main .heading {
+    grid-area: 1 / 1 / 2 / 3;
+    padding-bottom: 50px;
+}
+
+/* Global - Project Pages */
+#project-description {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#project-description p {
+    max-width: 700px;
+}
+
+#project-description .triangle-container {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+#project-main section .heading {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+#project-main section img {
+    width: 100%;
+    height: 100%;
+}
+
+#project-mockups {
+    background-color: var(--blu);
+}
+
+#project-mockups, #project-wireframes {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+    padding-bottom: 100px;
+}
+
+#project-buttons {
+    /* padding-top: 50px; */
+    padding-bottom: 50px;
+    background-color: var(--blk);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.previous-button {
+    grid-column: 1/2;
+    justify-self: start;
+}
+
+.next-button {
+    grid-column: 2/3;
+    justify-self: end;
+}
+
 /* Home - about-section*/
-#hm-main > section {
+section {
     padding-left: 70px;
     padding-right: 70px;
 }
@@ -120,12 +245,20 @@ h2 {
 #about-section {
     min-height: 100vh;
     background-color: var(--blk);
-    color: var(--wht);
     display: grid;
-    grid-template-columns: .5fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 1fr;
     gap: 30px;
     align-items: start;
-    padding: 100px 50px;
+    padding-top: 100px;
+}
+
+.bio {
+    padding: 0;
+}
+
+#about-section .triangle-container {
+    grid-area: 2 / 2 / 3 / 3;
 }
 
 .about-portrait {
@@ -147,7 +280,6 @@ h2 {
     min-height: 100vh;
     padding-bottom: 100px;
     background-color: var(--blu);
-    color: var(--wht);
     display: grid;
     grid-template-columns: repeat(3, 3fr);
     grid-template-rows: 1fr 2fr 2fr;
@@ -156,6 +288,14 @@ h2 {
 
 #work-section > h2 {
     grid-column: 1/4;
+}
+
+#work-section a:hover {
+    border-top: 5px solid var(--blk);
+}
+
+#work-section a:hover h3 {
+    color: var(--blk);
 }
 
 #work-section a img {
@@ -167,12 +307,18 @@ h2 {
 #contact-section {
     min-height: 75vh;
     background-color: var(--blk);
-    color: var(--wht);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
+#contact-section a {
+    width: 105px;
+}
+
+#contact-section p {
+    max-width: 650px;
+}
 
 /* Projects - 1 - */
 /* Projects - 2 - */
