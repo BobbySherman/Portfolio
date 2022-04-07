@@ -145,7 +145,7 @@ h2 {
 }
 
 h3 {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .italic {
@@ -216,14 +216,15 @@ h3 {
 
 #project-mockups, #project-wireframes {
     min-height: 100vh;
-    /* display: grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    gap: 30px; */
+    gap: 30px;
     padding-bottom: 100px;
 }
 
 #project-buttons {
+    text-align: center;
     padding-bottom: 50px;
     background-color: var(--blk);
     display: grid;
@@ -231,11 +232,13 @@ h3 {
 }
 
 .previous-button {
+    width: 95px;
     grid-column: 1/2;
     justify-self: start;
 }
 
 .next-button {
+    width: 95px;
     grid-column: 2/3;
     justify-self: end;
 }
@@ -343,6 +346,10 @@ section {
 }
 
 /* Project - 1 - */
+#project-1 #project-mockups, #project-1 #project-wireframes {
+    display: block;
+}
+
 #project-1 article {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -352,16 +359,17 @@ section {
     padding-bottom: 50px;
 }
 
-#project-mockups article h3 {
+#project-1 h3 {
     grid-area: 1 / 1 / 2 / 4;
     color: var(--blk);
-    border-bottom: 5px solid var(--blk);
+    border-left: 25px solid var(--blk);
+    padding-left: 20px;
 }
 
-#project-wireframes article h3 {
+#project-wireframes h3 {
     grid-area: 1 / 1 / 2 / 4;
     color: var(--blu);
-    border-bottom: 5px solid var(--blu);
+    border-left: 25px solid var(--blu);
 }
 
 #project-1 article:last-of-type {
