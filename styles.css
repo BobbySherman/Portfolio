@@ -60,6 +60,7 @@ body {
 .nav-link {
     font-weight: var(--bold);
     padding: 10px;
+    border: 1px solid var(--blk);
 }
 
 .nav-link:hover {
@@ -148,7 +149,11 @@ h3 {
 }
 
 .italic {
-    color: var(--gry);
+    color: var(--blu);
+}
+
+.blue-text {
+    color: var(--blu);
 }
 
 .triangle { /* https://css-tricks.com/snippets/css/css-triangle/ | Chris Coyier on Oct 6, 2009 (Updated on Sep 29, 2016) */
@@ -175,12 +180,13 @@ h3 {
     padding-bottom: 50px;
 }
 
-#project-main .heading {
-    grid-area: 1 / 1 / 2 / 3;
-    padding-bottom: 50px;
-}
 
 /* Global - Project Pages */
+#project-main .heading {
+    grid-area: 1 / 1 / 2 / 3;
+    padding-bottom: 80px;
+}
+
 #project-description {
     min-height: 80vh;
     display: flex;
@@ -191,18 +197,17 @@ h3 {
     max-width: 700px;
 }
 
+#project-description ul {
+    padding: 20px 0;
+}
+
 #project-description .triangle-container {
     padding-top: 50px;
     padding-bottom: 20px;
 }
 
-#project-main section .heading {
-    grid-area: 1 / 1 / 2 / 3;
-}
-
-#project-main section img {
+#project-main img {
     width: 100%;
-    height: 100%;
 }
 
 #project-mockups {
@@ -211,15 +216,14 @@ h3 {
 
 #project-mockups, #project-wireframes {
     min-height: 100vh;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    gap: 30px;
+    gap: 30px; */
     padding-bottom: 100px;
 }
 
 #project-buttons {
-    /* padding-top: 50px; */
     padding-bottom: 50px;
     background-color: var(--blk);
     display: grid;
@@ -234,6 +238,14 @@ h3 {
 .next-button {
     grid-column: 2/3;
     justify-self: end;
+}
+
+.project-btn-link {
+    display: inline-block;
+}
+
+.project-btn-link:first-child {
+    margin-right: 10px;
 }
 
 /* Home - about-section*/
@@ -282,12 +294,17 @@ section {
     background-color: var(--blu);
     display: grid;
     grid-template-columns: repeat(3, 3fr);
-    grid-template-rows: 1fr 2fr 2fr;
-    gap: 30px;
+    grid-template-rows: auto;
+    gap: 40px;
+    align-items: end;
 }
 
 #work-section > h2 {
     grid-column: 1/4;
+}
+
+#work-section a {
+    border-top: 5px solid var(--blu);
 }
 
 #work-section a:hover {
@@ -300,7 +317,11 @@ section {
 
 #work-section a img {
     width: 100%;
-    height: 80%;
+    opacity: .8;
+}
+
+#work-section a:hover img {
+    opacity: 1;
 }
 
 /* Home - contact-section*/
@@ -318,10 +339,64 @@ section {
 
 #contact-section p {
     max-width: 650px;
+    padding-top: 40px;
 }
 
-/* Projects - 1 - */
-/* Projects - 2 - */
-/* Projects - 3 - */
-/* Projects - 4 - */
-/* Projects - 5 - */
+/* Project - 1 - */
+#project-1 article {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 30px;
+    align-items: start;
+    padding-bottom: 50px;
+}
+
+#project-mockups article h3 {
+    grid-area: 1 / 1 / 2 / 4;
+    color: var(--blk);
+    border-bottom: 5px solid var(--blk);
+}
+
+#project-wireframes article h3 {
+    grid-area: 1 / 1 / 2 / 4;
+    color: var(--blu);
+    border-bottom: 5px solid var(--blu);
+}
+
+#project-1 article:last-of-type {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#project-1 article:last-of-type h3 {
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+/* Project - 2 - */
+/* Project - 3 - */
+.project-3-mockup {
+    grid-area: 2 / 1 / 3 / 3;
+    max-width: 1024px;
+    justify-self: center;
+}
+
+.project-3-buttons {
+    padding-top: 50px;
+}
+
+/* Project - 4 - */
+#project-4 #project-mockups .heading {
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+#project-4 #project-mockups {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.project-4-gif {
+    grid-area: 2 / 1 / 3 / 3;
+    max-width: 500px;
+    justify-self: center;
+}
+
+/* Project - 5 - */
