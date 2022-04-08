@@ -601,6 +601,13 @@ h3 {
     }
 
 
+
+    #project-description {
+        min-height: 60vh;
+    }
+
+
+
     /** Project-1 */
     #project-1 article {
         gap: 10px;
