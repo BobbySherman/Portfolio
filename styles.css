@@ -15,6 +15,7 @@ a {
     display: inline-block;
 }
 
+
 /* VARIABLES */
 :root {
     --blk: rgb(30, 32, 33);
@@ -31,11 +32,15 @@ a {
 /* GLOBAL */
 body {
     background-color: var(--blk);
-    padding-top: 50px;
+}
+
+section {
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 #header {
-    height: 100px;
+    padding-top: 50px;
     background-color: var(--blk);
     padding-left: 70px;
     padding-right: 70px;
@@ -269,12 +274,8 @@ h3 {
     margin-right: 10px;
 }
 
-/* Home - about-section*/
-section {
-    padding-left: 70px;
-    padding-right: 70px;
-}
 
+/* Home - about-section*/
 #about-section {
     min-height: 100vh;
     background-color: var(--blk);
@@ -308,6 +309,7 @@ section {
     padding-bottom: 30px;
 }
 
+
 /* Home - work-section*/
 #work-section {
     min-height: 100vh;
@@ -318,10 +320,6 @@ section {
     grid-template-rows: auto;
     gap: 40px;
     align-items: end;
-}
-
-#work-section > h2 {
-    grid-column: 1/4;
 }
 
 #work-section a {
@@ -345,13 +343,14 @@ section {
     opacity: 1;
 }
 
+
 /* Home - contact-section*/
 #contact-section {
-    min-height: 75vh;
     background-color: var(--blk);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding-bottom: 60px;
 }
 
 #contact-section a {
@@ -362,6 +361,7 @@ section {
     max-width: 650px;
     padding-top: 40px;
 }
+
 
 /* Project - 1 - */
 #project-1 #project-mockups, #project-1 #project-wireframes {
@@ -375,6 +375,11 @@ section {
     gap: 30px;
     align-items: start;
     padding-bottom: 50px;
+}
+
+#project-1 #project-mockups > article,
+#project-1 #project-wireframes > article {
+    padding-top: 30px;
 }
 
 #project-1 h3 {
@@ -397,6 +402,7 @@ section {
     grid-area: 1 / 1 / 2 / 5;
 }
 
+
 /* Project - 2 - */
 .tutorial-img{
     margin-top: 10px;
@@ -406,6 +412,7 @@ section {
 #project-2 #project-buttons {
     padding-top: 50px;
 }
+
 
 /* Project - 3 - */
 .project-3-mockup {
@@ -417,6 +424,7 @@ section {
 .project-3-buttons {
     padding-top: 50px;
 }
+
 
 /* Project - 4 - */
 #project-4 #project-mockups .heading {
@@ -433,6 +441,7 @@ section {
     justify-self: center;
 }
 
+
 /* Project - 5 - */
 #project-5 figure {
     grid-area: 2 / 1 / 3 / 3;
@@ -447,3 +456,214 @@ section {
 #project-5 .button-dark {
     margin-top: 10px;
 }
+
+
+/** Tiny Screen */
+@media screen and (max-width: 320px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .logo-link {
+        width: 60%;
+    }
+
+    .head-logo {
+        width: 100%;
+    }
+
+    #header, #footer, .header-wrapper, .footer-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: start;
+    }
+
+    #about-section, #work-section, #contact-section, #project-mockups, #project-wireframes, #project-description {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: start;
+    }
+
+    h1, h2 {
+        font-size: 200%;
+    }
+
+    #project-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+}
+
+
+/* MOBILE */
+@media screen and (min-width: 320px) and (max-width: 667px)  {
+    
+    /* Mobile - Global */
+    nav {
+        display: none;
+    }
+
+    h1 {
+        font-size: 250%;
+    }
+
+    h2 {
+        font-size: 350%;
+    }
+
+    section, #header, #footer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    #header {
+        padding-top: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .header-wrapper {
+        border-bottom: 5px solid var(--blu);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+    .head-logo {
+        width: 60%;
+    }
+
+    .footer-wrapper {
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .footer-wrapper p {
+        font-size: 70%;
+    }
+
+    #about-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 30px 0;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .bio {
+        padding: 0;
+        grid-area: 2 / 1 / 2 / 3;
+    }
+    
+    #about-section .triangle-container {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    
+    .about-portrait {
+        width: 40%;
+        padding-top: 0;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    
+    #about-section h2 {
+        font-size: 250%;
+    }
+
+    
+    /* Home - work-section*/
+    #work-section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        align-items: end;
+    }
+    
+    #work-section > .heading {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    
+    #work-section a img {
+        opacity: 1;
+    }
+
+
+    /** Project-1 */
+    #project-1 article {
+        gap: 10px;
+    }
+
+
+    /** Project-2 */
+    #project-2 #project-mockups {
+        grid-template-columns: 1fr;
+    }
+
+    #project-2 #project-mockups .heading {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+
+    /** Project-3 */
+    #project-3 #project-mockups {
+        gap: 0;
+    }
+
+    #project-3 .heading {
+        padding-bottom: 0;
+    }
+
+
+    /** Project-4 */
+    #project-4 #project-mockups {
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #project-4 #project-mockups .heading {
+        grid-area: 1 / 1 / 2 / 4;
+    }
+
+
+    /** Project-5 */
+    #project-5 .ux-testing {
+        grid-template-columns: 1fr;
+    }
+
+    #project-5 .ux-testing .heading {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    
+}
+
+
+/* TABLET */
+@media screen and (min-width: 668px) and (max-width: 1024px) {
+
+}
+
+
+/* DESKTOP */
+@media screen and (min-width: 1025px) and (max-width: 1824px) {
+
+}
+
+
+/** Large Screens */
+/* @media screen and (min-width: 1825px) {
+    body {
+        margin: 0 auto;
+        width: 2000px;
+        transform: scale(1.1) translate(0, 200px);
+    }
+} */
