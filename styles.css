@@ -84,8 +84,8 @@ section {
     background-color: var(--blk);
 }
 
-.nav-ul > li {
-    margin-right: 20px;
+.nav-ul li:first-of-type {
+    margin-right: 30px;
 }
 
 #footer {
@@ -121,6 +121,7 @@ section {
     padding: 10px;
     font-weight: var(--bold);
     border: 1px solid var(--blu);
+    text-align: center;
 }
 
 .button:hover {
@@ -135,6 +136,7 @@ section {
     display: inline-block;
     padding: 10px;
     font-weight: var(--bold);
+    text-align: center;
 }
 
 .button-dark:hover {
@@ -277,14 +279,14 @@ h3 {
 
 /* Home - about-section*/
 #about-section {
-    min-height: 100vh;
+    min-height: 50vh;
     background-color: var(--blk);
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: repeat(2, auto);
     gap: 30px;
     align-items: start;
-    padding-top: 100px;
+    padding: 100px;
 }
 
 .bio {
@@ -301,7 +303,7 @@ h3 {
 }
 
 #about-section p {
-    max-width: 800px;
+    max-width: 850px;
 }
 
 #about-section h2 {
@@ -346,6 +348,7 @@ h3 {
 
 /* Home - contact-section*/
 #contact-section {
+    min-height: 40vh;
     background-color: var(--blk);
     display: flex;
     flex-direction: column;
@@ -358,7 +361,7 @@ h3 {
 }
 
 #contact-section p {
-    max-width: 650px;
+    max-width: 800px;
     padding-top: 40px;
 }
 
@@ -654,16 +657,56 @@ h3 {
 
 
 /* DESKTOP */
-@media screen and (min-width: 1025px) and (max-width: 1824px) {
+@media screen and (min-width: 1025px) and (max-width: 2000px) {
 
 }
 
 
 /** Large Screens */
-/* @media screen and (min-width: 1825px) {
+@media screen and (min-width: 2000px) {
     body {
         margin: 0 auto;
-        width: 2000px;
-        transform: scale(1.1) translate(0, 200px);
+        max-width: 3000px;
+        font-size: 150%;
     }
-} */
+
+    .head-logo {
+        width: 600px;
+    }
+
+    #header, #footer, #about-section, #work-section, #contact-section, 
+    #project-mockups, #project-wireframes, #project-description, #project-buttons {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    #header, #footer, #about-section, #work-section,
+    #project-mockups, #project-wireframes, #project-description, #project-buttons, #project-1 article {
+        gap: 100px;
+    }
+
+    #contact-section a {
+        width: 155px;
+    }
+
+    #project-description p {
+        max-width: 1000px;
+    }
+
+    .previous-button, .next-button {
+        width: 130px;
+    }
+
+    .project-3-mockup {
+        max-width: 1500px;
+    }
+
+    .project-4-gif {
+        max-width: 800px;
+    }
+
+    #project-5 figure {
+        max-width: 1500px;
+    }
+
+}
