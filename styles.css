@@ -77,6 +77,7 @@ section {
 
 .nav-li {
     display: inline-block;
+    margin-left: 30px;
 }
 
 .nav-link {
@@ -101,8 +102,11 @@ section {
     background-color: var(--blk);
 }
 
-.nav-ul li:first-of-type {
-    margin-right: 30px;
+.menu-toggle {
+    font-size: 200%;
+    display: none !important;
+    cursor: pointer;
+    color: var(--blu);
 }
 
 #footer {
@@ -478,6 +482,66 @@ h3 {
     margin-top: 10px;
 }
 
+/**
+ * 
+ * Media Queries
+ *
+*/
+
+/** Mobile Nav */
+@media screen and (max-width: 800px) {
+    .header-wrapper {
+        height: 80px;
+    }
+    
+    .logo-link {
+        width: 200px;
+    }
+    
+    .head-logo {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block !important;
+    }
+
+    nav {
+        justify-self: center;
+        position: fixed;
+        width: 100%;
+        background-color: var(--blk);
+        top: 130px;
+        right: 0;
+        text-align: right;
+        height: 40vh;
+        display: none;
+        z-index: 1;
+    }
+
+    .nav-ul {
+        padding: 40px 70px;
+    }
+
+    .nav-li {
+        display: block;
+        padding: 20px 0;
+    }
+
+    nav.open {
+        display: block;
+        overflow: hidden;
+    }
+
+    nav.close {
+        display: none;
+    }
+
+    .no-scroll {
+        overflow: hidden;
+    }
+}
+
 
 /** Tiny Screen */
 @media screen and (max-width: 320px) {
@@ -485,18 +549,6 @@ h3 {
     body {
         display: flex;
         flex-direction: column;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .logo-link {
-        width: 60%;
-    }
-
-    .head-logo {
-        width: 100%;
     }
 
     #header, #footer, .header-wrapper, .footer-wrapper {
@@ -530,10 +582,6 @@ h3 {
 @media screen and (min-width: 320px) and (max-width: 667px)  {
     
     /* Mobile - Global */
-    nav {
-        display: none;
-    }
-
     h1 {
         font-size: 250%;
     }
@@ -548,9 +596,12 @@ h3 {
     }
 
     #header {
-        padding-top: 30px;
         padding-left: 40px;
         padding-right: 40px;
+    }
+
+    .nav-ul {
+        padding: 40px 40px;
     }
     
     .header-wrapper {
@@ -559,9 +610,6 @@ h3 {
         justify-content: space-between;
         align-items: center;
         padding-bottom: 10px;
-    }
-    .head-logo {
-        width: 60%;
     }
 
     .footer-wrapper {
@@ -677,6 +725,7 @@ h3 {
 
 /* TABLET */
 @media screen and (min-width: 668px) and (max-width: 1024px) {
+    
 
 }
 
