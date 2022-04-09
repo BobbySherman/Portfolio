@@ -511,10 +511,10 @@ h3 {
         position: fixed;
         width: 100%;
         background-color: var(--blk);
-        top: 130px;
+        top: 125px;
         right: 0;
         text-align: right;
-        height: 40vh;
+        height: 100vh;
         display: none;
         z-index: 1;
     }
