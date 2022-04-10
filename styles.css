@@ -221,7 +221,7 @@ h3 {
 }
 
 #project-description {
-    min-height: 80vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
 }
@@ -323,7 +323,6 @@ h3 {
 
 /* Home - work-section*/
 #work-section {
-    min-height: 100vh;
     padding-bottom: 100px;
     background-color: var(--blu);
     display: grid;
@@ -539,7 +538,7 @@ h3 {
 
 
 /** Tiny Screen */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 374px) {
     body {
         display: flex;
         flex-direction: column;
@@ -593,7 +592,7 @@ h3 {
 
 
 /* MOBILE */
-@media screen and (min-width: 351px) and (max-width: 730px)  {
+@media screen and (min-width: 375px) and (max-width: 730px)  {
     /* Mobile - Global */
     h1 {
         font-size: 250%;
@@ -670,11 +669,6 @@ h3 {
     #work-section > .heading {
         grid-area: 1 / 1 / 2 / 3;
     }
-
-    #project-description {
-        min-height: 60vh;
-    }
-
 
 
     /** Project-1 */
