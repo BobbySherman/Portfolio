@@ -112,9 +112,13 @@ section {
 }
 
 .fa-linkedin, .fa-github {
-    padding: 5px; /* adjust footer padding-right */
+    padding: 5px;
     font-size: 200%;
     transition: .3s ease;
+}
+
+.fa-github {
+    padding-right: 0;
 }
 
 .fa-linkedin:hover, .fa-github:hover {
@@ -563,6 +567,10 @@ h3 {
         align-items: center;
     }
 
+    .fa-linkedin {
+        padding-left: 0;
+    }
+
     #about-section, #work-section, #contact-section, #project-mockups, #project-wireframes, #project-description {
         display: flex;
         flex-direction: column;
@@ -628,6 +636,10 @@ h3 {
 
     .footer-wrapper p {
         font-size: 70%;
+    }
+
+    .fa-linkedin {
+        padding-left: 0;
     }
 
     #about-section {
