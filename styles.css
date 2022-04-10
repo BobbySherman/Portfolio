@@ -1,22 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-
-
-/** Make sure you remove this */
-.under-construction {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    width: 100%;
-    text-align: center;
-    font-weight: var(--bold);
-    background-color: var(--blu);
-    border-bottom: 2px solid var(--gry);
-    position: fixed;
-    z-index: 1;
-}
-/** Make sure you remove this */
-
-
 /* RESET */
 * {
     margin: 0;
@@ -84,6 +67,7 @@ section {
     font-weight: var(--bold);
     padding: 10px;
     border: 1px solid var(--blk);
+    transition: .3s ease;
 }
 
 .nav-link:hover {
@@ -130,6 +114,7 @@ section {
 .fa-linkedin, .fa-github {
     padding: 5px; /* adjust footer padding-right */
     font-size: 200%;
+    transition: .3s ease;
 }
 
 .fa-linkedin:hover, .fa-github:hover {
@@ -143,6 +128,7 @@ section {
     font-weight: var(--bold);
     border: 1px solid var(--blu);
     text-align: center;
+    transition: .3s ease;
 }
 
 .button:hover {
@@ -158,12 +144,13 @@ section {
     padding: 10px;
     font-weight: var(--bold);
     text-align: center;
+    transition: .3s ease;
 }
 
 .button-dark:hover {
     color: var(--blk);
     border: 1px solid var(--blk);
-    background-color: var(--gry);
+    background-color: var(--blu);
 }
 
 p {
@@ -249,7 +236,7 @@ h3 {
 
 #project-description .triangle-container {
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 #project-main img {
@@ -261,7 +248,7 @@ h3 {
 }
 
 #project-mockups, #project-wireframes {
-    min-height: 100vh;
+    min-height: 50vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -347,24 +334,37 @@ h3 {
 }
 
 #work-section a {
-    border-top: 5px solid var(--blu);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-color: var(--gry);
+    padding: 10px;
 }
 
-#work-section a:hover {
-    border-top: 5px solid var(--blk);
+#work-section a h3 {
+    border-left: 5px solid var(--blu);
+    padding-left: 10px;
+    margin-bottom: 15px;
+    color: var(--blk);
 }
 
 #work-section a:hover h3 {
-    color: var(--blk);
+    border-left: 5px solid var(--blk);
 }
 
 #work-section a img {
     width: 100%;
-    opacity: .8;
+    background-color: var(--gry);
 }
 
-#work-section a:hover img {
-    opacity: 1;
+#work-section a {
+    transition: .3s ease;
+}
+
+#work-section a:hover {
+    z-index: 1;
+    transform: scale(1.02);
 }
 
 
@@ -482,11 +482,6 @@ h3 {
     margin-top: 10px;
 }
 
-/**
- * 
- * Media Queries
- *
-*/
 
 /** Mobile Nav */
 @media screen and (max-width: 900px) {
@@ -528,11 +523,6 @@ h3 {
         padding: 20px 0;
     }
 
-    nav.open {
-        display: block;
-        overflow: hidden;
-    }
-
     nav.close {
         display: none;
     }
@@ -544,25 +534,44 @@ h3 {
 
 
 /** Tiny Screen */
-@media screen and (max-width: 320px) {
-
+@media screen and (max-width: 350px) {
     body {
         display: flex;
         flex-direction: column;
     }
 
-    #header, #footer, .header-wrapper, .footer-wrapper {
+    #footer, .footer-wrapper {
         display: flex;
         flex-direction: column;
         padding: 10px;
         align-items: start;
     }
 
+    #header {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     #about-section, #work-section, #contact-section, #project-mockups, #project-wireframes, #project-description {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px 80px 10px;
+        align-items: start;
+    }
+
+    #project-mockups article, #project-wireframes article {
         display: flex;
         flex-direction: column;
         padding: 10px;
         align-items: start;
+        gap: 10px
     }
 
     h1, h2 {
@@ -579,8 +588,7 @@ h3 {
 
 
 /* MOBILE */
-@media screen and (min-width: 320px) and (max-width: 667px)  {
-    
+@media screen and (min-width: 351px) and (max-width: 730px)  {
     /* Mobile - Global */
     h1 {
         font-size: 250%;
@@ -591,11 +599,6 @@ h3 {
     }
 
     section, #header, #footer {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    #header {
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -690,16 +693,6 @@ h3 {
     }
 
 
-    /** Project-3 */
-    #project-3 #project-mockups {
-        gap: 0;
-    }
-
-    #project-3 .heading {
-        padding-bottom: 0;
-    }
-
-
     /** Project-4 */
     #project-4 #project-mockups {
         gap: 20px;
@@ -719,20 +712,17 @@ h3 {
     #project-5 .ux-testing .heading {
         grid-area: 1 / 1 / 2 / 2;
     }
-    
 }
 
 
-/* TABLET */
-@media screen and (min-width: 668px) and (max-width: 1024px) {
-    
+@media screen and (min-width: 900px) {
+    #project-4 #project-mockups {
+        grid-template-columns: repeat(6, 1fr);
+    }
 
-}
-
-
-/* DESKTOP */
-@media screen and (min-width: 1025px) and (max-width: 2000px) {
-
+    #project-4 #project-mockups .heading {
+        grid-area: 1 / 1 / 2 / 7;
+    }
 }
 
 
@@ -782,5 +772,4 @@ h3 {
     #project-5 figure {
         max-width: 1500px;
     }
-
 }
