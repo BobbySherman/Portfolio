@@ -87,7 +87,7 @@ section {
 }
 
 .menu-toggle {
-    font-size: 200%;
+    font-size: 175%;
     display: none !important;
     cursor: pointer;
     color: var(--blu);
@@ -479,14 +479,19 @@ h3 {
 }
 
 #project-5 .button-dark {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 
 /** Mobile Nav */
 @media screen and (max-width: 900px) {
+    #header {
+        padding-top: 10px;
+    }
+    
     .header-wrapper {
-        height: 80px;
+        height: 60px;
+        padding-bottom: 0;
     }
     
     .logo-link {
@@ -599,12 +604,12 @@ h3 {
     }
 
     section, #header, #footer {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .nav-ul {
-        padding: 40px 40px;
+        padding: 30px 25px;
     }
     
     .header-wrapper {
@@ -612,13 +617,14 @@ h3 {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 10px;
     }
 
     .footer-wrapper {
         flex-direction: column-reverse;
         align-items: start;
-        gap: 20px;
+        gap: 15px;
+        padding-top: 15px;
+        padding-bottom: 10px;
     }
 
     .footer-wrapper p {
@@ -657,19 +663,13 @@ h3 {
     #work-section {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        gap: 20px;
+        gap: 15px;
         align-items: end;
     }
     
     #work-section > .heading {
         grid-area: 1 / 1 / 2 / 3;
     }
-    
-    #work-section a img {
-        opacity: 1;
-    }
-
-
 
     #project-description {
         min-height: 60vh;
@@ -686,6 +686,15 @@ h3 {
     /** Project-2 */
     #project-2 #project-mockups {
         grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    #project-2 h3 {
+        margin: 0;
+    }
+
+    .tutorial-img {
+        margin: 5px 0;
     }
 
     #project-2 #project-mockups .heading {
@@ -707,10 +716,19 @@ h3 {
     /** Project-5 */
     #project-5 .ux-testing {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     #project-5 .ux-testing .heading {
         grid-area: 1 / 1 / 2 / 2;
+    }
+
+    #project-5 .ux-testing h3 {
+        margin-bottom: 5px;
+    }
+
+    #project-5 .ux-testing p {
+        padding-bottom: 5px;
     }
 }
 
