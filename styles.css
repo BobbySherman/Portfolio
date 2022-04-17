@@ -56,6 +56,7 @@ section {
 
 .head-logo {
     width: 350px;
+    padding-top: 10px;
 }
 
 .nav-li {
@@ -312,7 +313,9 @@ h3 {
 
 .about-portrait {
     width: 80%;
-    padding-top: 23px;
+    margin-top: 23px;
+    /* border-radius: 50%; */
+    box-shadow: 10px 10px var(--blu);
 }
 
 #about-section p {
@@ -494,7 +497,9 @@ h3 {
     
     .header-wrapper {
         height: 60px;
+        padding-top: 10px;
         padding-bottom: 0;
+        align-items: flex-start;
     }
     
     .logo-link {
@@ -503,6 +508,7 @@ h3 {
     
     .head-logo {
         width: 100%;
+        padding-top: 0;
     }
 
     .menu-toggle {
@@ -565,6 +571,8 @@ h3 {
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: auto;
+        padding-bottom: 10px;
     }
 
     .fa-linkedin {
@@ -617,13 +625,6 @@ h3 {
 
     .nav-ul {
         padding: 30px 25px;
-    }
-    
-    .header-wrapper {
-        border-bottom: 5px solid var(--blu);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 
     .footer-wrapper {
