@@ -346,6 +346,7 @@ h3 {
     height: 100%;
     background-color: var(--gry);
     padding: 10px;
+    box-shadow: 0 5px 5px 2px rgba(30, 32, 33, .2);
 }
 
 #work-section a h3 {
@@ -371,6 +372,7 @@ h3 {
 #work-section a:hover {
     z-index: 1;
     transform: scale(1.02);
+    box-shadow: 0 6px 6px 3px rgba(30, 32, 33, .2);
 }
 
 
