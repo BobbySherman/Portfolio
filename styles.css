@@ -314,7 +314,6 @@ h3 {
 .about-portrait {
     width: 80%;
     margin-top: 23px;
-    /* border-radius: 50%; */
     box-shadow: 10px 10px var(--blu);
 }
 
@@ -346,7 +345,7 @@ h3 {
     height: 100%;
     background-color: var(--gry);
     padding: 10px;
-    box-shadow: 0 5px 5px 2px rgba(30, 32, 33, .2);
+    box-shadow: 0 2px 3px 2px rgba(30, 32, 33, .1);
 }
 
 #work-section a h3 {
@@ -372,7 +371,7 @@ h3 {
 #work-section a:hover {
     z-index: 1;
     transform: scale(1.02);
-    box-shadow: 0 6px 6px 3px rgba(30, 32, 33, .2);
+    box-shadow: 0 3px 5px 4px rgba(30, 32, 33, .1);
 }
 
 
