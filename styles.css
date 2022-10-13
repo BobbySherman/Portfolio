@@ -112,7 +112,7 @@ section {
     padding-bottom: 30px;
 }
 
-.fa-linkedin, .fa-github {
+.fab  {
     padding: 5px;
     font-size: 200%;
     transition: .3s ease;
@@ -122,7 +122,7 @@ section {
     padding-right: 0;
 }
 
-.fa-linkedin:hover, .fa-github:hover {
+.fab:hover {
     color: var(--blu);
 }
 
@@ -386,7 +386,7 @@ h3 {
 }
 
 #contact-section a {
-    width: 105px;
+    width: 110px;
 }
 
 #contact-section p {
