@@ -1,7 +1,7 @@
 /*
-    GIT417: Lawn care Home Page script
+    GIT417-418: Lawn care Home Page script
     Author: Bobby Sherman
-    Date:   8/22/21
+    Date:   8/22/21-12/5/21
 */
 "use strict";
 

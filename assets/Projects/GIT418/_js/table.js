@@ -1,9 +1,7 @@
 /*
-    GIT417: Lawncare About Page Table
+    GIT417-418: Lawncare About Page Table
     Author: Bobby Sherman
-    Date:   10/20/21 
-
-    Filename: table.js
+    Date:   8/22/21-12/5/21
 */
 
 "use strict;"

@@ -1,3 +1,9 @@
+/*
+    GIT417-418: Lawn care Tutorial Page Style
+    Author: Bobby Sherman
+    Date:   8/22/21-12/5/21
+*/
+
 /* reset */
 * {
     margin: 0;
@@ -137,16 +143,13 @@ section {
 }
 
 pre {
-    white-space: nowrap;
+    white-space: pre-wrap;
     background-color: #eee;
-    border-left: 4px solid green;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 4px;
 }
 
-code {
-    white-space: pre-wrap;
-}
 
 /* footer */
 .footer {

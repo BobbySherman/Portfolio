@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--
+    GIT417-418: JavaSript Tutorial2
+    Author: Bobby Sherman
+    Date:   8/22/21-12/5/21
+    -->
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Abott Co. | jQuery Tutorial</title>
+   <link rel="stylesheet" href="../_css/tutorial.css">
+   
+   <!-- Modernizr Library -->
+   <script src="../_js/modernizr.custom.05819.js"></script>
+
+   <!-- These 2 lines of code get the highlight js code library from a cloud content distribution network (CDN) -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/highlight.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/javascript.min.js"></script>
+   <!-- In order to add html code examples this line needs to be in the head tag -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/xml.min.js"></script>
+   <!-- This line is needed for the default CSS style -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/styles/default.min.css">
+   <!-- End of hightlight JS code library CDN declarations Everything after this is your design and tutorial-->
+</head>
+
+<body id="tutorial">
+    <header id="header" class="header">
+        <a class="logo-link" href="../index.html"><img class="logo" src="../_images/SVG/Logo_White.svg" alt="logo"></a>
+
+        <nav Class="nav-bar">
+            <ul Class="nav-ul">
+                <li Class="nav-li"><a class="home nav-link" href="../index.html">Home</a></li>
+                <li Class="nav-li"><a class="service nav-link" href="../_pages/service.html">Service</a></li>
+                <li Class="nav-li"><a class="about nav-link" href="../_pages/about.html">About</a></li>
+                <li Class="nav-li"><a class="contact nav-link" href="../_pages/contact.html">Contact</a></li>
+                <li Class="nav-li"><a class="security nav-link" href="../_pages/security.html">Security</a></li>
+                <li Class="nav-li"><a class="nav-link" href="../_pages/tutorial.html">Validation</a></li>
+                <li Class="nav-li"><a class="tutorial nav-link" href="../_pages/tutorial2.html">jQuery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>jQuery Tutorial</h1>
+            <div class="title">
+                <h2>Animate With jQuery</h2>
+                <p>Use jQuery to select and animate HTML elements</p>
+            </div>
+
+            <article>
+                <h3>Download</h3>
+                <div class="steps"><a class="download" href="../_download/jQuery-Starting.zip">Work Along</a> Files</div>
+                <p class="note">Follow along!</p>
+            </article>    
+            
+            <article>
+                <h3>Linking the jQuery Library</h3>
+                <p class="note">To use jQuery we need to link the library to our HTML file</p>
+                <p class="steps">Copy the line of HTML below and add it to the bottom of the body tag - just before the current script tag - in the index.html file</p>
+                <pre>
+                    <code class="html">
+                    &lt;script src=&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;&gt;&lt;/script&gt;
+                    </code>
+                </pre>
+                <p class="note">This loads the jQuery library into our project! We need this libray to load before our script file.</p>
+            </article>
+
+            <article>
+                <h3>Select and Animate Elements with Tag Names</h3>
+                <p class="steps">Before we can animate an element, we need to know how to select an element.</p>                
+                <p class="note">One of the advantages of jQuery is less typing and to start things off we'll look at the alias function!</p>
+                <p class="note">Remember: The double forward slash represents a comment in JavaScript code. I will use this to help clarify the code blocks from time to time.</p>   
+                <pre>
+                    <code class="javascript">
+                    // jQuery Function - The function below is the original function we use with jQuery
+                    jQuery();
+
+                    // Alias Function - We can use shorthand with the alias below to refer to the jQuery() function!
+                    $();
+                    </code>
+                </pre> 
+                <p class="steps">Open the index.html file in your browser and make note of the headings.</p>
+                <p class="note">Tip: use ctrl/cmd + o</p>  
+                <p class="steps">Open the index.html file in your editor and familiarize yourself with the sections.</p>     
+                <p class="steps">Open the script.js file in your editor and take note of the comments.</p>
+                <p class="steps">We have a few options to select a target with jQuery. The fist one we'll use is the HTML tag name.</p>
+                <p class="steps">Find the //SELECTORS comment in the script.js file and add the following alias and selector.</p>
+                <pre>
+                    <code class="javascript">
+                    // We place the HTML tag name inside the parenthesis with quotes.
+                    $("button");
+                    </code>
+                </pre>
+                <p class="steps">Next we'll add a click event to the function using the click() method.</p>
+                <pre>
+                    <code class="javascript">
+                    $("button").click();
+                    </code>
+                </pre>
+                <p class="steps">Now need to tell the click method to do something after the button is clicked.</p>   
+                <pre>
+                    <code class="javascript">
+                    $("button").click(function() {});
+                    </code>
+                </pre>
+                <p class="note">We are using an anonymous function to inside the click method. When we click the button, the statements in this function will fire.</p>   
+                <p class="steps">Now we need to select the rectangle we want to animate. Place a return inside the brackets and select the "div" element.</p>
+                <pre>
+                    <code class="javascript">
+                    $("button").click(function() {
+                        $("div");
+                    });
+                    </code>
+                </pre>
+                <p class="steps">To add animation we'll use the animate() method with a css left property to move the element to the right.</p>
+                <pre>
+                    <code class="javascript">
+                    $("button").click(function() {
+                        $("div").animate({left: "400px"});
+                    });
+                    </code>
+                </pre>
+                <p class="steps">Save the script.js file and return to your browser. Click the "Move Right" button.</p>   
+                <p class="note">Notice that all the rectangles moved to the right. This is because We used the tag name as a selector. When we do this, we affect all the HTML elements in the document with that tag name.</p>
+                <p class="note">Refresh the page and click on one of the buttons below. All the rectangle move to the right. Again, this is cool, but we want to target the first button only.</p>   
+            </article>
+
+            <article>
+                <h3>Select and Animate Specific Elements</h3>
+                <p class="note">One way to target a specific element is to add the :first selector to the end of the tag name. This will allow us to target the first element with that name.</p>
+                <p class="steps">Return to your script file and copy the function we just finished and paste it a couple lines below. Then comment out the first function by putting // in front of the lines.</p>                
+                <p class="steps">Now we'll add the :first selector after button tag. Shown below.</p>
+                <pre>
+                    <code class="javascript">
+                    $("button:first").click(function() {
+                        $("div").animate({left: "400px"});
+                    });
+                    </code>
+                </pre>
+                <p class="note">Another popular selector is the "this" keyword. The cool thing about "this" is that it references the element, function, or object that called it.</p>
+                <p class="steps">Let's replace the "div" in the second statement and see what happens.</p>
+                <pre>
+                    <code class="javascript">
+                    $("button:first").click(function() {
+                        $("this").animate({left: "400px"});
+                    });
+                    </code>
+                </pre>
+                <p class="steps">Return to the browser and test the button.</p>
+                <p class="note">Now the button moves instead of the rectangle. While this is cool, it's not what we want. Just good to know!</p>   
+            </article>
+
+            <article>
+                <h3>Select and Animate Elements Using Class and ID</h3>
+                <p class="note">Probably the most popular selectors use the class or id of an element. Next we'll add these to our function.</p>
+                <p class="steps">Copy the function we just completed and paste it a couple lines below. Then comment out the second function.</p>  
+                <p class="steps">Let's replace the selector for the button with class name inside the button tag. Refernce the first section in the HTML file.</p>
+                <p class="steps">Now let's replace the "this" keyword with the id for the rectangle in the div tag.</p>
+                <p class="note">Your function shuold look like the one below.</p>   
+                <pre>
+                    <code class="javascript">
+                    $(".move").click(function() {
+                        $("#rectangle-move").animate({left: "400px"});
+                    });
+                    </code>
+                </pre>
+                <p class="steps">Return to the browser and test the button.</p>
+                <p class="note">Now we have targeted the correct button and rectangle! We'll continue to use this selector method in the rest of the tutorial.</p>   
+                <p class="steps">It's important to point out an important css property that allows the element to move. Open the css file and scroll down to line 80. We must set the position to reletive in order for these movements to work effectively.</p>
+            </article>
+
+            <article>
+                <h3>Move The Element Faster</h3>
+                <p class="note">We some control over the speed of the animation. We can add "fast" or "slow" to the statement to change the speed.</p>
+                <p class="steps">Return to the index.html file. Find the class for the second button and id for the second rectangle.</p>                
+                <p class="steps">In the script.js file copy the previous function and paste it below the // MOVE RIGHT - FAST comment.</p>
+                <p class="note">No need to comment out the function. Only the first two will remain commented out.</p>   
+                <p class="steps">Replace the class and id names with the names you just found.</p>
+                <p class="steps">In the animate() method place a comma after the css property. Then add a space and type "fast" with the quotes.</p>
+                <p class="note">Your function should match the one below.</p>
+                <pre>
+                    <code class="javascript">
+                    // MOVE RIGHT - FAST
+                    $(".fast").click(function() {
+                        $("#rectangle-fast").animate({left: "400px"}, "fast");
+                    });
+                    </code>
+                </pre>
+                <p class="note">When we click the "move faster" button in the browser the second rectangle moves faster than the first.</p>   
+                <p class="note">Refresh the page to compare speeds.</p>   
+            </article>
+
+            <article>
+                <h3>Slide Effect</h3>
+                <p class="note">Another cool animation effect we can use is the slide method.</p>
+                <p class="steps">Copy the previous function and paste it below the // SLIDE TOGGLE comment. Then locate the class and id names for the slide toggle section and replace the current names in the function.</p>      
+                <p class="steps">Delete the animate statement and it's contents. Your function should match the one below.</p>
+                <pre>
+                    <code class="javascript">
+                    // SLIDE TOGGLE
+                    $(".slideToggle").click(function() {
+                        $("#rectangle-toggle");
+                    });
+                    </code>
+                </pre>
+                <p class="steps">After the rectangle selector add the following slide method. Don't forget the period!</p>
+                <pre>
+                    <code class="javascript">
+                    // SLIDE TOGGLE
+                    $(".slideToggle").click(function() {
+                        $("#rectangle-toggle").slideToggle();
+                    });
+                    </code>
+                </pre>
+                <p class="note">Another way to control speed is with miliseconds.</p>
+                <p class="steps">Add 1000 inside the slideToggle parenthesis.</p>
+                <pre>
+                    <code class="javascript">
+                    // SLIDE TOGGLE
+                    $(".slideToggle").click(function() {
+                        $("#rectangle-toggle").slideToggle(1000);
+                    });
+                    </code>
+                </pre>
+                <p class="steps">Test your function in the browser. Since we are using a toggle, you can click the button multiple times.</p>
+            </article>
+
+            <article>
+                <h3>Hide Element</h3>
+                <p class="steps">Go through our copy/paste routine and our replace class/id routine from the previous sections. This time we're working on the hide effect.</p>
+                <p class="steps">Replace the slideToggle() method and its contents with the hide() method. Don't forget the period!</p>
+                <pre>
+                    <code class="javascript">
+                    // HIDE
+                    $(".hide").click(function() {
+                        $("#rectangle-hide").hide();
+                    });
+                    </code>
+                </pre> 
+                <p class="steps">Test the hide button in the browser.</p>
+                <p class="note">Now that the element is gone. We can bring it back with the show() method.</p>
+                <p class="steps">Copy the current function and paste it a couple lines below.</p>
+                <p class="steps">Replace the hide() method with the show() method.</p>
+                <p class="steps">Find the class name for the show button in the index.html file. The test it out!</p>
+                <pre>
+                    <code class="javascript">
+                    // HIDE
+                    $(".hide").click(function() {
+                        $("#rectangle-hide").hide();
+                    });
+                    
+                    $(".show").click(function() {
+                        $("#rectangle-hide").show();
+                    });
+                    </code>
+                </pre> 
+                <p class="note">This is cool but we can do both with one button.</p>
+                <p class="steps">Copy/paste the current function a couple lines below. Replace the show() method with the toggle() method.</p>
+                <p class="steps">Replace the class name with the toggle button class name and test it out!</p>
+                <pre>
+                    <code class="javascript">
+                    // HIDE
+                    $(".hide").click(function() {
+                        $("#rectangle-hide").hide();
+                    });
+                    
+                    $(".show").click(function() {
+                        $("#rectangle-hide").show();
+                    });
+                    
+                    $(".hide-toggle").click(function() {
+                        $("#rectangle-hide").toggle();
+                    });
+                    </code>
+                </pre>  
+                <p class="steps">Try adding miliseconds or the "fast" or "slow" keywords in the method parenthesis.</p>
+            </article>
+
+            <article>
+                <h3>Fade Element</h3>
+                <p class="note">Another cool effect is the fade() method.</p>
+                <p class="steps">Go through you copy/paste routine and replace the class/id with the next section. We're just going to use one method this time.</p>    
+                <p class="steps">Now replace the current method with fadeToggle() method.</p>
+                <pre>
+                    <code class="javascript">
+                    // FADE TOGGLE
+                    $(".fadeToggle").click(function() {
+                        $("#rectangle-fade").fadeToggle();
+                    });
+                    </code>
+                </pre>
+                <p class="steps">Test it out in the browser!</p>
+                <p class="note">Try different speeds!</p>   
+            </article>
+
+            <article>
+                <h3>Bonus: Combine Animations</h3>
+                <p class="steps">We can use the animate() method to change multiple css properties and combine effects.</p>
+                <p class="note">The block of code below contains two css properties: width and opacity.</p>   
+                <p class="note">I've opened the method brackets to make it easier to read.</p>   
+                <p class="note">It also conatins two keywords: slow and swing. Swing refers to the easing (an animation term used to describe the type of acceleration or bezier curve of the timing.) Swing will be slow at the beginning and end of the movement, but it is faster in the middle movement</p>   
+                <p class="steps">Copy and paste this into your script file and test it in your browser!</p>
+                <pre>
+                    <code class="javascript">
+                    // BONUS: COMBINE ANIMATIONS
+                    $(".animate").click(function() {
+                        $("#rectangle-animate").animate({
+                            width: "toggle", 
+                            opacity: "toggle"
+                        },
+                            "slow",
+                            "swing"
+                        );
+                    });
+                    </code>
+                </pre>
+                <p class="note">There are many options for animation with jQuery.</p>   
+            </article>
+            
+            <article>
+                <h3>Download</h3>
+                <div class="steps">Completed <a class="download" href="../_download/jQuery-Completed.zip">Work Along</a> Files</div>
+                <p class="note">For reference</p>
+            </article>
+    </main>
+
+    <footer class="footer">
+        <img class="logo" src="../_images/SVG/Logo_White.svg" alt="logo">
+        <div class="ft-adrs">
+            <p>309-555-5555</p>
+            <p>Washington, IL</p>
+        </div>
+        <p>Site by Bobby Sherman</p>
+    </footer>
+
+    <!-- This next line is required to make the code light-up with syntax highlighting -->
+    <script>hljs.initHighlightingOnLoad();</script>   
+</body>
+</html>

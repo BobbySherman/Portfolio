@@ -1,7 +1,7 @@
-/*  GIT417 + GIT418: Abott Lawncare Contact Page
+/*  GIT417-418: Abott Lawncare Contact Page
     Author: Bobby Sherman
-    Date:   8/22/21 - 11/5/21
- */
+    Date:   8/22/21-12/5/21
+*/
 "use strict";
 
 // Module 3 - decision making

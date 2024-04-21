@@ -1,3 +1,9 @@
+/*
+    GIT417-418: Lawn care Service Page script
+    Author: Bobby Sherman
+    Date:   8/22/21-12/5/21
+*/
+
 // ANCHOR: Module 6: CHAPTER 12 - JQUERY
 // NOTE: globale variable
 var quote = $("form .quote");
