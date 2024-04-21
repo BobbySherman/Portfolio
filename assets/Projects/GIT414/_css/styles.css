@@ -1,0 +1,1607 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+/* REGION: RESET */
+
+	/* 	http://meyerweb.com/eric/tools/css/reset/ 
+   		v2.0 | 20110126
+   		License: none (public domain)
+   		modified by: Bobby Sherman */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 110%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+	background-color: #000;
+}
+ol, ul{
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input, textarea {
+	box-sizing: border-box;
+	margin: 0;
+} 
+/* !REGION: RESET - END */
+
+
+/* REGION: Global STYLES */
+main {
+	background-color: #fff;
+}
+
+/* SECTION: h GLOBAL */
+h1 {
+	text-align: center;
+	font-size: 300%;
+	font-weight: var(--smi);
+	padding: 5%;
+}
+
+h2 {
+	text-align: center;
+	font-weight: var(--smi);
+	font-size: 200%;
+	padding: 3%;
+}
+
+h3 {
+	font-weight: var(--smi);
+	font-size: 125%;
+}
+
+h4 {
+	font-weight: var(--smi);
+	margin-bottom: 10px;
+}
+
+
+/* SECTION: p GLOBAL */
+p {
+	color: var(--black);
+}
+
+/* SECTION: btn GLOBAL */
+.btn {
+	display: inline-block;
+	background-color: var(--blue);
+	margin: 10px 0;
+	padding: 10px 12px;
+	color: var(--white);
+	font-weight: var(--smi);
+}
+
+.btn:hover {
+	transition: 100ms ease-in-out;
+	background-color: var(--hvrBlue);
+}
+
+.btn:active {
+	transform: scale(.9);
+}
+
+/* SECTION: HEADER GLOBAL */
+#service #header, #contact #header {
+	background-color: #fff;
+}
+
+#header {
+	grid-area: header;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	height: 100px;
+	padding: 1%;
+	position: relative;
+	z-index: 1;
+}
+
+#header-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 475px;
+}
+
+.menu-icon {
+	display: none;
+}
+
+.head-logo {
+	width: 150px;
+}
+
+.head-cta-logo {
+	display: block;
+	padding: 3% 0;
+	height: 60px;
+}
+
+.head-nbr {
+	text-align: center;
+	width: 155px;
+}
+
+
+/* SECTION: HEAD CTA GLOBAL */
+#head-cta {
+	grid-area: 1 / 1 / 3 / 2;
+	background-image: 
+		linear-gradient(
+			rgba(0, 0, 0, .15),
+			rgba(0, 0, 0, .15)
+		),
+		url(../pic/room.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+	padding: 4%;
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	z-index: 0;
+}
+
+.head-p {
+	color: var(--white);
+	font-weight: var(--med);
+}
+
+
+/* SECTION: NAV GLOBAL*/
+.nav-ul {
+	display: flex;
+	flex-direction: row;
+	width: 300px;
+	justify-content: space-between;
+}
+
+.nav-link:hover, .head-nbr:hover {
+	background-image: url(../background/blue-box.svg);
+	background-repeat: no-repeat;
+	background-size: 150px;
+	background-position: bottom;
+}
+
+.current-page {
+	background-image: url(../background/blue-box.svg);
+	background-repeat: no-repeat;
+	background-size: 150px;
+	background-position: bottom;
+}
+
+.nav-link, .head-nbr {
+	color: var(--black);
+	font-weight: var(--bld);
+	font-size: 125%;
+	letter-spacing: 2px;
+}
+
+.vrt-line {
+	border-left: 1.75px solid var(--black);
+	height: 40px;
+}
+
+
+/* SECTION: CTA GLOBAL */
+#cta { 
+		background-size: cover;
+		background-position: center;
+		padding: 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		font-size: 130%;
+}
+
+#cta p {        
+	font-weight: var(--smi);
+}
+
+#cta li {
+	padding: 5px 0;
+}
+
+#cta ul {
+	padding-top: 10px;
+}
+    
+.cta-num {
+	color: var(--black);
+	font-weight: var(--smi);
+}
+
+
+/* SECTION: main GLOBAL */
+main {
+	grid-area: main;
+	display: grid;
+}
+
+
+/* REGION: footer GLOBAL */
+footer {
+	grid-area: footer;
+	background-color: var(--black);
+	display: grid;
+}
+
+footer p, footer a {
+	color: var(--white);
+}
+
+footer > img {
+	grid-area: ft-logo;
+	align-self: end;
+}
+
+footer ul {
+	grid-area: ft-social;
+	display: grid;
+	text-align: center;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+/* https://css-tricks.com/spriting-img/ -- Robin Rendle (Feb 6, 2015) */
+.ig {
+	object-fit: cover; /* modified */
+	object-position: 0 0;
+}
+
+.fb {
+	object-fit: cover; /* modified */
+	object-position: 0 0;
+}
+
+footer address {
+	grid-area: ft-info;
+}
+
+footer section {
+	grid-area: ft-btm;
+	text-align: center;
+	align-self: end;
+} 
+/* !REGION END - footer GLOBAL */
+
+
+/* REGION: HOME GLOBAL */
+#home {
+	display: grid;
+}
+
+
+/* SECTION: PROCESS */
+#process {
+	grid-area: process;
+	display: grid;
+}
+
+#process article {
+	display: grid;
+	background-color: var(--grey);
+}
+
+.process-card {
+	background-color: var(--white);
+	display: grid;
+	padding: 2%;
+}
+
+.process-card img {
+	grid-area: pro-icon;
+}
+
+.process-card h4 {
+	grid-area: pro-h4;
+}
+
+.process-card p, .process-card li {
+	grid-area: pro-info;
+}
+
+
+/* SECTION: WORKERS */
+#hm-workers {
+		grid-area: workers;
+		display: grid;
+}
+
+
+/* SECTION: SERVICE */
+#hm-service {
+		grid-area: service;
+		display: grid;
+}
+
+.srv-lnk {
+		display: grid;
+		align-items: end;
+}
+
+.srv-p {
+	background: var(--alphaBlue);
+	color: var(--white);
+	font-weight: var(--smi);
+	font-size: 150%;
+	grid-area: 2 / 1 / 3 / 2;
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+}
+
+.srv-img {
+		grid-area: 1 / 1 / 3 / 2;
+		width: 100%;
+}
+
+
+/* SECTION: REVIEWS */
+#reviews {
+		grid-area: review;
+		display: grid;
+		background-color: var(--blue);
+		padding: 4% 4% 6% 4%;
+		font-size: 110%;
+}
+
+.review-p {
+	display: grid;
+	background-color: var(--white);
+	text-align: center;
+	padding: 5%;
+}
+
+#reviews h2 {
+	color: var(--white);
+}
+
+#reviews cite {
+	align-self: center;
+	font-weight: var(--smi);
+}
+
+#reviews cite {
+	margin-bottom: 10px;
+	font-weight: var(--smi);
+}
+
+
+/* SECTION: CTA-HOME */
+#home #cta {
+	grid-area: cta;
+	background-image: url(../pic/handshake.jpg);
+
+}
+/* !REGION END - HOME GLOBAL */
+
+
+/* REGION: SERVICE GLOBAL */
+#remodel {
+	grid-area: remodel;
+}
+
+#deck {
+	grid-area: deck;
+}
+
+#roof {
+	grid-area: roof;
+}
+
+#siding {
+	grid-area: siding;
+}
+
+#addition {
+	grid-area: addition;
+}
+
+#door {
+	grid-area: door;
+}
+
+#new {
+	grid-area: new;
+}
+
+#srv-header {
+	grid-area: srv-header;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	background-color: var(--blue);
+}
+
+#srv-header h1, #srv-header p {
+	color: var(--white);
+}
+
+#srv-header p {
+	font-size: 120%;
+}
+
+
+/* SECTION: SERVICE CARDS */
+#service-main article {
+	display: grid;
+	gap: 15px;
+	padding: 5%;
+	align-content: start;
+}
+
+#service-main article img {
+	width: 100%;
+}
+
+#service-main p {
+	margin-top: 10px;
+}
+
+#service-main h3 {
+	margin-bottom: 10px;
+}
+
+#service-main article ul {
+	list-style-type: disc;
+	list-style-position: inside;
+	margin: 10px 5px;
+}
+
+
+/* SECTION: SERVICE CTA */
+#service #cta {
+	grid-area: srv-cta;
+	background-image: 
+		linear-gradient(
+			rgba(0, 0, 0, .4),
+			rgba(0, 0, 0, .4)
+		),
+		url(../pic/design.jpg);
+}
+
+#service .cta-num {
+	color: var(--white);
+}
+
+#service #cta p {
+	color: var(--white);
+}
+/* !REGION: END - SERVICE GLOBAL */
+
+
+/* REGION: CONTACT GLOBAL */
+#contact main {
+	grid-template-rows: .125fr 1fr .5fr;
+	grid-template-areas: 
+	"ct-h1"
+	"form"
+	"ct-info"
+	;
+}
+
+#contact h1 {
+	grid-area: ct-h1;
+	background-color: var(--blue);
+	color: var(--white);
+}
+
+
+/* SECTION: FORM */
+#form {
+	grid-area: form;
+	background-color: var(--blue);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 4%;
+}
+
+#form section {
+	background-color: var(--white);
+}
+
+#form .title {
+	font-weight: var(--med);
+}
+
+#form .inputs,
+#form select,
+#form textarea {
+	width: 100%;
+	padding: 8px;
+	margin: 5px 0 10px 0;
+	background-color: var(--white);
+	border: 1.2px solid var(--black);
+}
+
+fieldset label {
+	margin: 5px 10px 5px 1px;
+}
+
+fieldset {
+	margin: 10px 0;
+}
+
+#form .btn {
+	border: none;
+}
+
+legend {
+	margin-bottom: 3px;
+}
+
+
+/* SECTION: INFO CARDS */
+#contact-info {
+	grid-area: ct-info;
+	background-color: var(--grey);
+	display: grid;
+	margin: 3%;
+}
+
+.info-cards {
+	background-color: var(--white);
+	text-align: center;
+	padding: 5%;
+}
+
+#social {
+	grid-area: social;
+	display: grid;
+	grid-template-rows: .1fr .9fr;
+	grid-template-columns: 1fr 1fr;
+}
+
+#hours {
+	grid-area: hours;
+}
+
+#address {
+	grid-area: address;
+}
+
+#bus-email {
+	grid-area: email;
+}
+
+#bus-email a {
+	color: var(--black);
+}
+
+#social h4 {
+	grid-column: 1/3;
+}
+
+#contact-info dt {
+	font-weight: var(--med);
+	margin-bottom: 2px;	
+}
+
+#contact-info dd {
+	margin-bottom: 6px;
+}
+
+#contact-info h4 {
+	padding: 8px;
+	margin-bottom: 10px;
+}
+
+#social img, #social p {
+	transform: scale(.9);
+}
+
+#social a {
+	justify-items: center;
+}
+/* !REGION: END - CONTACT GLOBAL */
+
+
+/* REGION: VARIABLES */
+:root {
+	/* SECTION: COLORS */
+	--white: hsl(0, 0%, 100%);
+	--grey: hsl(0, 0%, 87%);
+	--black: hsl(0, 0%, 0%);
+	--blue: hsl(200, 100%, 42%);
+	--alphaBlue: hsla(200, 100%, 42%, 65%);
+	--hvrBlue: hsl(200, 100%, 22%);
+
+	/* SECTION: FONT WEIGHTS */
+	--lt: 300;
+	--nrm: 400;
+	--med: 500;
+	--smi: 600;
+	--bld: 700;
+} 
+/* !REGION: END - VARIABLES */
+/* !REGION: END - GLOBAL STYLES */
+
+
+
+
+/* REGION: MOBILE */
+@media screen and (min-width: 320px) and (max-width: 667px)  {
+	
+	/* REGION: MOBILE GLOBAL */
+
+	/* SECTION: HEADER */
+	.head-cta-logo, .head-nbr, .vrt-line {
+		display: none;
+	}
+
+	#header {
+		grid-area: header;
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		height: 75px;
+		padding: 2% 5%;
+	}
+
+	#header-container {
+		width: auto;
+	}
+
+	.head-logo {
+		height: 35px;
+	}
+
+	.logo-a {
+		position: relative;
+		z-index: 100;
+	}
+
+	
+	/* SECTION: Nav */
+	/*	https://www.youtube.com/watch?v=XsvvSRN9DyA -- XO PIXEL 
+		Used as a base for building a semantic nav */
+	#menu-icon {
+		background-image: url(../icon/menu_sprite.svg);
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: cover;
+		display: block;
+		height: 40px;
+		width: 40px;
+		position: relative;
+		z-index: 5;
+	}
+
+	.nav-ul {
+		opacity: 0;
+		display: block;
+		position: absolute;
+		background: var(--white);
+		top: 0;
+		left: 100%;
+		width: 100%;
+		padding-top: 20%;
+		z-index: 3;
+		transition: 400ms;
+	}
+
+	nav:hover ul {
+		opacity: 1;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100vh;
+		padding-top: 20%;
+		overflow: hidden;
+	}
+
+	.nav-li {
+		padding: 6% 0;
+		display: block;
+		text-align: center;
+	}
+
+	.nav-link {
+		text-decoration: none;
+		color: var(--black);
+		font-weight: var(--bld);
+		font-size: 250%;
+	}
+
+	.nav-link:hover {
+		background-image: url(../background/blue-box.svg);
+		background-repeat: no-repeat;
+		background-size: 325px;
+		background-position: bottom;
+	}
+
+	.current-page {
+		background-image: url(../background/blue-box.svg);
+		background-repeat: no-repeat;
+		background-size: 325px;
+		background-position: bottom;
+	}
+
+
+	/* MOBILE - SECTION: FOOTER */
+	footer {
+		grid-row-gap: 10px;
+		padding: 5%;
+		grid-template-rows: .5fr .5fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 
+		"ft-logo ft-social"
+		". ft-info"
+		"ft-btm ft-btm"
+		;
+	}
+
+	footer p, footer a {
+		font-size: 80%;
+	}
+
+	footer img {
+		width: 150px;
+	}
+
+	footer ul {
+		justify-self: end;
+		column-gap: 10px;
+	}
+
+	.ig {
+		width: 40px;
+		height: 40px;
+	}
+
+	.fb {
+		width: 20px;
+		height: 39.5px;
+	}
+
+	footer address {
+		text-align: right;
+	}
+
+	footer address a {
+		display: block;
+		padding: 5px 0;
+	}
+	/* !REGION: END - MOBILE GLOBAL */
+
+
+	/* REGION: HOME */
+	#home {
+		grid-template-rows: auto .25fr 4fr .01fr;
+		grid-template-areas: 
+		"header"
+		"head-cta"
+		"main"
+		"footer"
+		;
+	}
+
+	/* SECTION: HEAD CTA */
+	#head-cta {
+		grid-area: 1 / 1 / 3 / 2;
+		background-image: 
+			linear-gradient(
+				rgba(0, 0, 0, .15),
+				rgba(0, 0, 0, .15)
+			),
+			url(../pic/room.jpg);
+		background-repeat: no-repeat;
+		background-position: top;
+		background-size: cover;
+		padding: 4%;
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.head-p {
+		color: var(--white);
+		font-weight: var(--med);
+	}
+
+	#hm-main {
+		grid-template-rows: .5fr .5fr 2fr 1fr .25fr;
+		grid-template-areas: 
+		"process"
+		"workers"
+		"service"
+		"review"
+		"cta"
+		;
+	}
+
+	
+	/* SECTION: PROCESS */
+	#process {
+		grid-template-rows: 1fr 4fr;
+		padding: 0 5% 10% 5%;
+	}
+
+	#process h2 {
+		align-self: center;
+	}
+
+	#process article {
+		grid-template-rows: repeat(5, 1fr);
+		row-gap: 10px;
+		padding: 4%;
+	}
+
+	.process-card {
+		width: 100%;
+		grid-template-columns: 1fr 2.5fr;
+		grid-template-rows: .90fr 1fr;
+		grid-template-areas: 
+		"pro-icon pro-h4"
+		"pro-icon pro-info"
+		;
+	}
+
+	.process-card img {
+		width: 50%;
+		align-self: center;
+		justify-self: center;
+	}
+
+	.process-card p, .process-card li {
+		font-size: 70%;
+	}
+
+	.process-card li {
+		margin-bottom: 5px;
+	}
+
+	.process-card h4 {
+		align-self: end;
+		margin-bottom: 5px;
+	}
+
+	
+	/* SECTION: WORKERS */
+	#hm-workers {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: .5fr 1fr .5fr;
+		grid-template-areas:
+		"wrk-exp wrk-exp"
+		"wrk-1 wrk-1"
+		"wrk-2 wrk-3"
+		;
+	}
+
+	.wrk-exp {
+		grid-area: wrk-exp;
+		background-color: var(--blue);
+		padding: 5%;
+		width: 100%;
+	}
+
+	.wrkPic-big {
+		grid-area: wrk-1;
+	}
+
+	.wrkPic-sml1 {
+		grid-area: wrk-2;
+	}
+
+	.wrkPic-sml2 {
+		grid-area: wrk-3;
+	}
+
+	#hm-workers img {
+		width: 100%;
+	}
+
+	#hm-workers p, #hm-workers h3 {
+		color: var(--white);
+		padding: 2%;
+	}
+
+
+	/* SECTION: SERVICE */
+	#hm-service {
+		row-gap: 15px;
+		grid-template-rows: .1fr repeat(7, .75fr);
+		margin-bottom: 50px;
+	}
+
+	.srv-lnk {
+		padding: 4%;
+		grid-template-rows: .8fr .2fr;
+	}
+
+	
+	/* SECTION: REVIEWS */
+	#reviews {
+		grid-template-rows: .5fr repeat(3, 2fr);
+		row-gap: 5%;
+		padding: 8%;
+	}
+	/* !REGION: END - HOME */
+
+	
+	/* REGION: SERVICE */
+	#service-main {
+		gap: 25px;
+		grid-template-rows: repeat(9, auto);
+		grid-template-areas:
+		"srv-header"
+		"remodel"
+		"deck"
+		"roof"
+		"siding"
+		"addition"
+		"door"
+		"new"
+		"srv-cta"
+		;
+	}
+
+	#srv-header {
+		padding: 5%;
+	}	
+
+	#srv-header p {
+		font-size: 100%;
+	}
+
+	#service-main article section {
+		padding: 0 2%;
+	}
+	/* !REGION: END - SERVICE */
+
+
+	/* REGION: CONTACT */
+	/* SECTION: FORM */
+	#form {
+		grid-template-columns: none;
+		grid-template-rows: 1fr .5fr;
+	}
+
+	.formS1 {
+		padding: 5% 5% 0 5%;
+	}
+
+	.formS2 {
+		padding: 0% 5% 5% 5%;
+	}
+
+
+	/* SECTION: INFO CARDS */
+	#contact-info {
+		padding: 3%;
+		gap: 3%;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(6, .25fr);
+		grid-template-areas:
+		"social email"
+		"social email"
+		"social hours"
+		"address hours"
+		"address hours"
+		"address hours"
+		;
+	}
+	/* !REGION: END - CONTACT */
+} 
+/* !REGION: END - MOBILE */
+
+
+
+
+/* REGION: TABLET */
+@media screen and (min-width: 668px) and (max-width: 1024px) {
+	
+	/* REGION: TABLET GLOBAL */
+	#header {
+		height: 75px;
+	}
+
+	footer {
+		padding: 20px;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		justify-items: center;
+		align-items: center;
+		grid-template-areas:
+		"ft-logo ft-info ft-social"
+		". ft-btm ."
+		;
+	}
+
+	footer img {
+		width: 200px;
+		justify-self: left;
+	}
+
+	.ig {
+		width: 40px;
+		height: 40px;
+		margin-left: 10px;
+	}
+
+	.fb {
+		width: 20px;
+		height: 39.5px;
+	}
+
+	footer address a {
+		display: block;
+		text-align: center;
+	}
+
+	footer ul {
+		justify-self: right;
+	}
+
+	footer section {
+		margin-top: 30px;
+		font-size: 80%;
+	}
+	/* !REGION: END - TABLET GLOBAL */
+	
+
+	/* REGION: HOME */
+	#home {
+		grid-template-rows: .8fr .2fr 5fr .01fr;
+		grid-template-areas: 
+		"header"
+		"head-cta"
+		"main"
+		"footer"
+		;
+	}
+
+	#hm-main {
+		grid-template-rows: .75fr repeat(2, auto) 2fr 1fr;
+		grid-template-areas: 
+		"process"
+		"workers"
+		"service"
+		"review"
+		"cta"
+		;
+	}
+
+
+	/* SECTION: PROCESS */
+	#process {
+		grid-template-rows: .2fr 1fr;
+		padding: 2%;
+	}
+
+	#process article {
+		grid-template-columns: repeat(5, 1fr);
+		column-gap: 10px;
+		padding: 1.5%;
+		margin-bottom: 3%;
+	}
+
+	.process-card {
+		grid-template-rows: 2fr .3fr 1fr;
+		grid-template-areas: 
+		"pro-icon"
+		"pro-h4"
+		"pro-info"
+		;
+	}
+
+	.process-card img {
+		width: 40%;
+		align-self: center;
+		justify-self: center;
+	}
+
+	.process-card:nth-child(4) img {
+		width: 70%;
+	}
+
+	.process-card p, .process-card li {
+		text-align: center;
+		font-size: 60%;
+		margin-bottom: 6px;
+	}
+
+	.process-card h4 {
+		text-align: center;
+		font-size: 80%;
+	}
+
+
+	/* SECTION: WORKERS */
+	#hm-workers {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-areas:
+		"wrk-1 wrk-1 wrk-exp wrk-exp"
+		"wrk-1 wrk-1 wrk-exp wrk-exp"
+		"wrk-1 wrk-1 wrk-2 wrk-3"
+		;
+	}
+
+	.wrk-exp {
+		grid-area: wrk-exp;
+		background-color: var(--blue);
+		padding: 5%;
+		width: 100%;
+	}
+
+	.wrkPic-big {
+		grid-area: wrk-1;
+		object-fit: cover;
+		height: 100%;
+	}
+
+	.wrkPic-sml1 {
+		grid-area: wrk-2;
+	}
+
+	.wrkPic-sml2 {
+		grid-area: wrk-3;
+	}
+
+	#hm-workers img {
+		width: 100%;
+	}
+
+	#hm-workers p, #hm-workers h3 {
+		color: var(--white);
+		padding: 2%;
+	}
+
+
+	/* SECTION: SERVICE */
+	#hm-service {
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: .25fr repeat(4, 1fr);
+		padding: 4%;
+		justify-items: center;
+		align-items: center;
+	}
+
+	#hm-service h2 {
+		grid-area: 1 / 1 / 2 / 3;
+	}
+
+	.srv-lnk {
+		padding: 2%;
+		margin: 2%;
+	}
+
+	.srv-img {
+		width: 100%;
+	}
+
+	.srv-lnk:last-of-type {
+		grid-area: 5 / 1 / 6 / 3;
+		width: 50%;
+	}
+
+
+	/* SECTION: REVIEWS */
+	#reviews {
+		gap: 4%;
+		grid-template-rows: .25fr repeat(2, 1fr);
+		grid-template-columns: repeat(2, auto);
+	}
+
+	#reviews h2 {
+		width: 100%;
+		grid-area: 1 / 1 / 2 / 3;
+	}
+
+	.review-p:nth-child(4) {
+		grid-area: 3 / 1 / 4 / 3;
+		width: 48%;
+		justify-self: center;
+	}
+
+	/* SECTION: CTA */
+	/* !REGION: HOME - END */
+
+
+	/* REGION: SERVICE */
+	#service-main {
+		grid-template-rows: .5fr repeat(4, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+		"srv-header srv-header"
+		"remodel deck"
+		"roof siding"
+		"addition door"
+		"new new"
+		"srv-cta srv-cta"
+		;
+	}
+
+
+	/* SECTION: HEADING */
+	#srv-header {
+		padding: 0 10%;
+		margin-bottom: 5%;
+	}
+
+
+	/* SECTION: CARDS */
+	#new {
+		width: 55%;
+		justify-self: center;
+	}
+
+	#service-main article section {
+		padding: 0 2%;
+	}
+	/* !REGION: SERVICE - END */
+
+
+	/* REGION: CONTACT */
+	/* SECTION FORM */
+	#form {
+		grid-template-columns: repeat(2, auto);
+	}
+
+	#form section {
+		padding: 8%;
+	}
+
+	/* SECTION INFO CARDS */
+	#contact-info {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: .8fr .2fr;
+		grid-template-areas:
+		"social hours address email"
+		". hours . .";
+		column-gap: 1.5%;
+		padding: 2%;
+	}
+	/* !REGION: CONTACT - END */
+} 
+/* !REGION: TABLET - END */
+
+
+
+
+/* REGION: DESKTOP */
+@media screen and (min-width: 1025px) {
+	
+	/* REGION: DESKTOP GLOBAL */
+	body {
+		max-width: 1800px;
+		margin: 0 auto;
+	}
+
+	/* SECTION: FOOTER */
+	footer {
+		padding: 20px;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		justify-items: center;
+		align-items: center;
+		grid-template-areas:
+		"ft-logo ft-info ft-social"
+		". ft-btm ."
+		;
+	}
+
+	footer img {
+		width: 200px;
+		justify-self: left;
+	}
+
+	.ig {
+		width: 40px;
+		height: 40px;
+		margin-left: 10px;
+	}
+
+	.fb {
+		width: 20px;
+		height: 39.5px;
+	}
+
+	footer address a {
+		display: block;
+		text-align: center;
+	}
+
+	footer ul {
+		justify-self: right;
+	}
+
+	footer section {
+		margin-top: 30px;
+		font-size: 80%;
+	}
+
+	h2 {
+		font-size: 250%;
+	}
+	/* !REGION: END - DESKTOP GLOBAL */
+
+
+	/* REGION: HOME */
+	#home {
+		grid-template-rows: .9fr .3fr 6fr .01fr;
+		grid-template-areas: 
+		"header"
+		"head-cta"
+		"main"
+		"footer"
+		;
+	}
+
+	.head-logo {
+		width: 200px;
+	}
+
+	#hm-main {
+		grid-template-rows: 1fr 1fr 2.5fr 1fr .75fr;
+		grid-template-areas: 
+		"process"
+		"workers"
+		"service"
+		"review"
+		"cta"
+		;
+	}
+
+
+	/* SECTION: PROCESS */
+	#process {
+		grid-template-rows: .2fr 1fr;
+		padding: 2%;
+	}
+
+	#process article {
+		grid-template-columns: repeat(5, 1fr);
+		column-gap: 10px;
+		padding: 1.5%;
+		margin-bottom: 5%;
+	}
+
+	.process-card {
+		grid-template-rows: 2fr .3fr 1fr;
+		grid-template-areas: 
+		"pro-icon"
+		"pro-h4"
+		"pro-info"
+		;
+	}
+
+	.process-card img {
+		width: 40%;
+		align-self: center;
+		justify-self: center;
+	}
+
+	.process-card:nth-child(4) img {
+		width: 70%;
+	}
+
+	.process-card p, .process-card li {
+		text-align: center;
+		font-size: 80%;
+		margin-bottom: 6px;
+	}
+
+	.process-card h4 {
+		text-align: center;
+	}
+
+
+	/* SECTION: WORKERS */
+	#hm-workers {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-areas:
+		"wrk-1 wrk-1 wrk-exp wrk-exp"
+		"wrk-1 wrk-1 wrk-exp wrk-exp"
+		"wrk-1 wrk-1 wrk-2 wrk-3"
+		;
+	}
+
+	.wrk-exp {
+		grid-area: wrk-exp;
+		background-color: var(--blue);
+		padding: 5%;
+		width: 100%;
+	}
+
+	.wrkPic-big {
+		grid-area: wrk-1;
+		object-fit: cover;
+		height: 100%;
+	}
+
+	.wrkPic-sml1 {
+		grid-area: wrk-2;
+	}
+
+	.wrkPic-sml2 {
+		grid-area: wrk-3;
+	}
+
+	#hm-workers img {
+		width: 100%;
+	}
+
+	#hm-workers p, #hm-workers h3 {
+		color: var(--white);
+		padding: 2%;
+	}
+
+	#hm-workers h3 {
+		font-size: 200%;
+	}
+
+	#hm-workers p {
+		font-size: 150%;
+	}
+
+
+	/* SECTION: SERVICE */
+	#hm-service {
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: .75fr 1fr .5fr 1fr;
+		padding: 4%;
+		gap: 4%;
+		grid-template-areas:
+		"h2 h2 h2 h2 h2 h2"
+		"remodel remodel remodel deck deck deck"
+		"roofing roofing siding siding addition addition"
+		"doors doors doors new new new"
+		;
+	}
+
+	.srv-lnk:nth-child(2) {
+		grid-area: remodel;
+	}
+
+	.srv-lnk:nth-child(3) {
+		grid-area: deck;
+	}
+
+	.srv-lnk:nth-child(4) {
+		grid-area: roofing;
+	}
+
+	.srv-lnk:nth-child(5) {
+		grid-area: siding;
+	}
+
+	.srv-lnk:nth-child(6) {
+		grid-area: addition;
+	}
+
+	.srv-lnk:nth-child(7) {
+		grid-area: doors;
+	}
+
+	.srv-lnk:last-child {
+		grid-area: new;
+	}
+
+	#hm-service h2 {
+		grid-area: h2;
+		font-size: 300%;
+	}
+
+	.srv-img {
+		width: 100%;
+	}
+
+
+	/* SECTION: REVIEWS */
+	#reviews {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr 2fr;
+		column-gap: 2%;
+	}
+
+	#reviews h2 {
+		grid-area: 1 / span 3;
+	}
+
+	.review-p {
+		padding: 5%;
+	}
+	/* !REGION: HOME - END */
+
+
+	/* REGION: SERVICE */
+	#service-main {
+		grid-template-rows: .75fr repeat(8, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas:
+		"srv-header srv-header"
+		"remodel remodel"
+		"deck deck"
+		"roof roof"
+		"siding siding"
+		"addition addition"
+		"door door"
+		"new new"
+		"srv-cta srv-cta"
+		;
+	}
+
+
+	/* SECTION HEADING */
+	#srv-header {
+		padding: 0 15%;
+		margin-bottom: 5%;
+	}
+
+
+	/* SECTION CARDS */
+	#service-main article {
+		display: grid;
+		column-gap: 5%;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+	}
+
+	#service-main article img {
+		align-self: start;
+	}
+
+	#service-main article {
+		font-size: 125%;
+	}
+	/* !REGION: SERVICE - END */
+
+
+	/* REGION: CONTACT */
+	/* SECTION FORM */
+	#form section {
+		padding: 8%;
+	}
+
+	/* SECTION INFO CARDS */
+	#contact-info {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: .8fr .2fr;
+		grid-template-areas:
+		"social hours address email"
+		". hours . .";
+		column-gap: 1.5%;
+		padding: 2%;
+	}
+	/* !REGION: CONTACT - END */
+} /* !REGION: DESKTOP - END */

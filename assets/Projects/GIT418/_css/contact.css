@@ -1,0 +1,230 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+
+/* header */
+.header {
+    background-color: black;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.nav-li {
+    list-style: none;
+    display: inline;
+}
+
+.nav-link {
+    color: white;
+    text-decoration-color: black;
+    text-underline-offset: 5px;
+    padding: 8px;
+}
+
+.nav-link:hover {
+    text-decoration-color: green;
+}
+
+.contact {
+    pointer-events: none;
+  	cursor: default;
+    text-decoration-color: green;
+}
+
+@media(max-width: 600px) {
+    .header {
+        flex-direction: column;
+        height: 100px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .nav-link:active {
+        background: green;
+        padding: 8px;
+    }
+}
+
+
+/* Main */
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.box {
+    width: 450px;
+    margin: 30px;
+}
+
+main {
+    padding-bottom: 50px;
+    min-height: 100vh;
+}
+
+h1 {
+    padding: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Form */
+form {
+    padding: 30px;
+    background-color: #eee;
+}
+
+.form-titles {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+fieldset {
+    border: 0;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#comments span {
+    color: grey;
+    font-size: 60%;
+}
+
+.phoneNumber {
+    width: 60px;
+    display: inline;
+}
+
+#addressTwo, #addressFour {
+    display: inline;
+    width: 41.27%; 
+}
+
+#addressThree {
+    display: inline;
+    width: 15%;
+}
+
+/* from:https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp
+Chrome, Safari, Edge, Opera */
+.phoneNumber::-webkit-outer-spin-button,
+.phoneNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* from:https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp
+Firefox */
+.phoneNumber[type=number] {
+  -moz-appearance: textfield;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    margin-top: 5px;
+}
+
+.button {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    font-weight: bold;
+    width: 80px;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(.95);
+    background-color: green;
+}
+
+#userMessage {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline-color: green;
+}
+
+
+/* Hours */
+h3 {
+    color: white;
+    background-color: green;
+    padding: 10px 0 10px 20px;
+    margin-bottom: 10px;
+}
+
+.dayHours {
+    text-align: left;
+    line-height: 30px;
+    font-weight: normal;
+    margin-left: 15px;
+}
+
+.weekDay {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+
+/* footer */
+.footer {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    Padding: 25px;
+    background-color: black;
+}
+
+.ft-adrs {
+    padding: 15px;
+}
+
+.ft-adrs p {
+    padding: 2px;
+}
+
+@media (max-width: 500px) {
+    .footer {
+        flex-direction: column;
+        font-size: 80%;
+    }
+}

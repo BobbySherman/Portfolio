@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--
+    GIT417: JavaSript Tutorial
+    Author: Bobby Sherman
+    Date:   10/5/21
+    -->
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Abott Co. | JS-Tutorial</title>
+   <link rel="stylesheet" href="../_css/tutorial.css">
+   
+   <!-- Modernizr Library -->
+   <script src="../_js/modernizr.custom.05819.js"></script>
+
+   <!-- These 2 lines of code get the highlight js code library from a cloud content distribution network (CDN) -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/highlight.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/javascript.min.js"></script>
+   <!-- In order to add html code examples this line needs to be in the head tag -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/xml.min.js"></script>
+   <!-- This line is needed for the default CSS style -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/styles/default.min.css">
+   <!-- End of hightlight JS code library CDN declarations Everything after this is your design and tutorial-->
+</head>
+
+<body id="tutorial">
+    <header id="header" class="header">
+        <a class="logo-link" href="../index.html"><img class="logo" src="../_images/SVG/Logo_White.svg" alt="logo"></a>
+
+        <nav Class="nav-bar">
+            <ul Class="nav-ul">
+                <li Class="nav-li"><a class="home nav-link" href="../index.html">Home</a></li>
+                <li Class="nav-li"><a class="service nav-link" href="../_pages/service.html">Service</a></li>
+                <li Class="nav-li"><a class="about nav-link" href="../_pages/about.html">About</a></li>
+                <li Class="nav-li"><a class="contact nav-link" href="../_pages/contact.html">Contact</a></li>
+                <li Class="nav-li"><a class="security nav-link" href="../_pages/security.html">Security</a></li>
+                <li Class="nav-li"><a class="tutorial nav-link" href="../_pages/tutorial.html">Tutorial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Tutorial</h1>
+            <div class="title">
+                <h2>How to use JavaSript to Validate Form Inputs</h2>
+                <p>This tutorial will focus on empty input fields</p>
+            </div>
+
+            <article>
+                <h3>Download</h3>
+                <div class="steps"><a class="download" href="../_download/Form-Download.zip">work-a-long files</a></div>
+                <p class="note">Follow along!</p>
+            </article>
+
+            <article>
+                <h3>Test Form</h3>
+                    <p class="steps">Open the index.html file in your browser and click the sumbit button.</p>
+                    <p class="note">The form doesn't submit and a bubble pops up telling us to fill in the first form field.</p>
+                    <p class="steps">We want to turn off the HTML validation. Javascript gives us more options.</p>
+            </article>
+
+            <article>
+                <h3>Disable Default HTML</h3>
+                <p class="steps">Open the index.html file from the folder you downloaded</p>
+                <p class="steps">Find the first <strong>form</strong> tag and add "novalidate" to the end of the attributes.</p>
+            <pre>
+                <code class="html">
+                    &lt;form class=&quot;box&quot; id=&quot;contactForm&quot; novalidate&gt;
+                </code>
+            </pre>
+                <p class="steps">Save the file and return to your browser</p>
+                <p class="steps">Refresh the page and click the submit button</p>
+                <p class="note">Since we disabled the HTML validation, the form will submit with empty fields. To stop this we'll trap the submit event by adding to our script.js file.</p>
+            </article>
+
+            <article>
+                <h3>Trap Submit EventL</h3>
+                <p class="steps">Open the script.js in your text editor</p>
+                <p class="steps">Look for the following comment</p>
+                <pre>
+                    <code class="javascript">
+                        // function to validate form
+                    </code>
+                </pre>
+                <p class="steps">Add the following function below the comment</p>
+                <pre>
+                    <code class="javascript">
+                        // function to validate form
+                        function validateForm(evt) {
+                        }
+                    </code>
+                </pre>
+                <p class="note">The evt parameter in the parenthesis is referencing the submit event inside the createEventListenrs function.</p>
+                <p class="steps">To trap the submit event and stop the form from submitting add the follow statement and comment to the validateForm function.</p>
+                <pre>
+                    <code class="javascript">
+                        // function to validate form
+                        function validateForm(evt) {
+                            evt.preventDefault(); // trap submit event
+                        }
+                    </code>
+                </pre>
+                <p class="steps">Now we need to create our custom validation.</p>
+            </article>
+
+            <article>
+                <h3>Setting Up Custom Validation</h3>
+                <p class="steps">Go back to the script.js file and find the following comment:</p>
+                <pre>
+                    <code class="javascript">
+                        // Function to check for empty fields
+                    </code>
+                </pre>
+                <p class="steps">Add the following function below the comment.</p>
+                <pre>
+                    <code class="javascript">
+                        // Function to check for empty fields
+                        function validateRequiredInputs() {
+                        }
+                    </code>
+                </pre>
+                <p class="steps">Now we need to declare some variables. Add the following variables below the "global variables" comment.</p>
+                <pre>
+                    <code class="javascript">
+                        // global Variables
+                        var formValidity = true;
+                        var inputValid = true;
+                    </code>
+                </pre>
+                <p class="note">We'll use these to track validity in our functions.</p>
+                <p class="steps">Now let's add the following local variables to our validateRequiredInputs() function.</p>
+                <pre>
+                    <code class="javascript">
+                        // Function to check for empty inputs
+                        function validateRequiredInputs() {
+                            var formInputs = document.querySelectorAll("#contactForm input"); // assign all contact inputs
+                            var userMessage = document.querySelector("#userMessage"); // assign message div
+                            var currentInput; // variable for current input
+                        }
+                    </code>
+                </pre>
+                <p class="note">We'll use these variables with our exception handling statements.</p>
+            </article>
+
+            <article>
+                <h3>Exception Handling</h3>
+                <p class="steps">We're going to use <strong>try/catch</strong> exception handling. This allows us to tell the program what to do with empty inputs.</p>
+                <p class="steps">Add the new lines below to your validateRequiredInputs() function.</p>
+                <pre>
+                    <code class="javascript">
+                        // Function to check for empty inputs
+                        function validateRequiredInputs() {
+                            var formInputs = document.querySelectorAll("#contactForm input"); // assign all contact inputs
+                            var userMessage = document.querySelector("#userMessage"); // assign message div
+                            var currentInput; // variable for current input
+
+                            // check for empty inputs
+                            try {
+                                for (var i = 0; i < 3; i++) {
+                                }
+                            }
+                        }
+                    </code>
+                </pre>
+                <p class="note">The <strong>try</strong> block allows us to set conditions for the input field values. The for statement inside the try block is going to start a loop.</p>
+                <p class="note">The <strong>for</strong> loop uses a counter variable: i (stands for index). This allows us to control the number of loops.</p>
+                <p class="note">Inside the parenthesis of the for loop we have 3 statements. The first declares i as the counter variable. The second tells the loop to continue as long as i is less than 3. The third tells the loop to increment by positive 1.</p>
+                <p class="note">The formInputs variable contains a node list. The length of this list is 3, but the range is 0-2. So the first input is 0 and the third input is 2. That's why the loop is set to run when i is less then 3.</p>
+                <p class="steps">Now we store the current loop input in currentInput variable and check it's value. Add the new lines below to the for loop block.</p>
+                <pre>
+                    <code class="javascript">
+                        // Function to check for empty inputs
+                        function validateRequiredInputs() {
+                            var formInputs = document.querySelectorAll("#contactForm input"); // assign all contact inputs
+                            var userMessage = document.querySelector("#userMessage"); // assign message div
+                            var currentInput; // variable for current input
+
+                            // check for empty inputs
+                            try {
+                                for (var i = 0; i < 3; i++) {
+                                    currentInput = formInputs[i]; // current input
+                                    
+                                    // apply border + input validity if empty
+                                    if (currentInput.value === "") {
+                                    currentInput.style.border = "1.5px solid red"; // apply border
+                                    inputValid = false; // progress to throw
+                                    }
+                                }
+                            }
+                        }
+                    </code>
+                </pre>
+                <p class="note">The <strong>if</strong> statement checks the value of the input field for an empty string (no user input). If the field is empty a red border is applied.</p>
+                <p class="note">Remember the inputValid variable? False will be assigned to inputValid when the field is empty (we'll use this later).</p>
+                <p class="steps">Add the new lines below to the <strong>for</strong> block.</p>
+                <pre>
+                    <code class="javascript">
+                        // Function to check for empty inputs
+                        function validateRequiredInputs() {
+                            var formInputs = document.querySelectorAll("#contactForm input"); // assign all contact inputs
+                            var userMessage = document.querySelector("#userMessage"); // assign message div
+                            var currentInput; // variable for current input
+
+                            // check for empty inputs
+                            try {
+                                for (var i = 0; i < 3; i++) {
+                                    currentInput = formInputs[i]; // current input
+                                    
+                                    // apply border + input validity if empty
+                                    if (currentInput.value === "") {
+                                    currentInput.style.border = "1.5px solid red"; // apply border
+                                    inputValid = false; // progress to throw
+                                    } else {
+                                        // reset Border and Input Validity
+                                        currentInput.style.border = "";
+                                        inputValid = true;
+                                    }
+                                }
+                            }
+                        }
+                    </code>
+                </pre>
+                <p class="note">The <strong>else</strong> block will remove (or not apply) a border and set (or reset) the inputValid to true.</p>
+                <p class="steps">We need to add a <strong>throw</strong> statement to the try block. This will create a message that we can display.</p>
+                <p class="steps">Add the new lines below to the <strong>try</strong> block under the <strong>for</strong> block.</p>
+                <pre>
+                    <code class="javascript">
+                        // Function to check for empty inputs
+                        function validateRequiredInputs() {
+                            var formInputs = document.querySelectorAll("#contactForm input"); // assign all contact inputs
+                            var userMessage = document.querySelector("#userMessage"); // assign message div
+                            var currentInput; // variable for current input
+
+                            // check for empty inputs
+                            try {
+                                for (var i = 0; i < 3; i++) {
+                                    currentInput = formInputs[i]; // current input
+                                    
+                                    // apply border + input validity if empty
+                                    if (currentInput.value === "") {
+                                    currentInput.style.border = "1.5px solid red"; // apply border
+                                    inputValid = false; // progress to throw
+                                    } else {
+                                        // reset Border and Input Validity
+                                        currentInput.style.border = "";
+                                        inputValid = true;
+                                    }
+                                }
+
+                                // throw message if not valid
+                                if (inputValid === false) {
+                                    throw "Please fill the outlined fields";
+                                }
+                            }
+                        }
+                    </code>
+                </pre>
+                <p class="note">The <strong>if</strong> statement creates the <strong>throw</strong> string when the <strong>for</strong> block assigns "false" to the inputValid variable.</p>
+                <p class="steps">Add the new lines below to the validateRequiredInputs() function under the <strong>try</strong> block</p>
+                <pre>
+                    <code class="javascript">
+                        // Function to check for empty inputs
+                        function validateRequiredInputs() {
+                            var formInputs = document.querySelectorAll("#contactForm input"); // assign all contact inputs
+                            var userMessage = document.querySelector("#userMessage"); // assign message div
+                            var currentInput; // variable for current input
+
+                            // check for empty inputs
+                            try {
+                                for (var i = 0; i < 3; i++) {
+                                    currentInput = formInputs[i]; // current input
+                                    
+                                    // apply border + input validity if empty
+                                    if (currentInput.value === "") {
+                                        currentInput.style.border = "1.5px solid red"; // apply border
+                                        inputValid = false; // progress to throw
+                                    } else {
+                                        // reset Border and Input Validity
+                                        currentInput.style.border = "";
+                                        inputValid = true;
+                                    }
+                                }
+
+                                // throw message if not valid
+                                if (inputValid === false) {
+                                    throw "Please fill the outlined fields";
+                                }
+                            }
+
+                            // if any input is empty show message
+                            catch(msg) {
+                            }
+                        }
+                    </code>
+                </pre>
+                <p class="note">We will use the <strong>catch</strong> block to display a message to the user and set the value of formValidity to false.</p>
+            </article>
+
+            <article>
+                <h3>Displaying A Message To The User</h3>
+                <p class="note">The <strong>catch</strong> statement will grab the message (msg) from the <strong>throw</strong> string.</p>
+                <p class="steps">Add the lines below to the <strong>catch</strong> block.</p>
+                <pre>
+                    <code class="javascript">
+                        // if any input is empty show message
+                        catch(msg) {
+                            // apply css style
+                            userMessage.style.border = "2px solid red";
+                            userMessage.style.padding = "9px";
+                            userMessage.style.marginBottom = "20px";
+
+                            // show message
+                            userMessage.textContent = msg;
+                            formValidity = false; // no submit
+                        }
+                    </code>
+                </pre>
+                <p class="note">The userMessage uses the textContent property to add text to the <strong>div</strong> element at the top of the form</p>
+                <p class="note">We are adding css style to the <strong>div</strong> element</p>
+                <p class="note">Finally we are assigning false to the formValidity variable. This will help us later.</p>
+                <p class="steps">Return to the <strong>try</strong> block. Add the new else block below just after the <strong>if</strong> block.</p>
+                <pre>
+                    <code class="javascript">
+                        else {
+                            // reset message div
+                            userMessage.textContent = "";
+                            userMessage.style.border = "";
+                            userMessage.style.padding = "";
+                            userMessage.style.marginBottom = "";
+                        }
+                    </code>
+                </pre>
+                <p class="note">This block will reset (or not apply) the message and the styling for the userMessage <strong>div</strong>.</p>
+            </article>
+
+            <article>
+                <h3>Calling The validateRequiredInputs Function</h3>
+                <p class="steps">Go back to the validateForm function and add the new lines from the following example.</p>
+                <pre>
+                    <code class="javascript">
+                        // function to validate form
+                        function validateForm(evt) {
+                            evt.preventDefault(); // trap submit event
+                            formValidity = true; // reset form validity on button click
+                            validateRequiredInputs(); // call function
+
+                            // if validateRequiredInputs returns formValidity = true
+                            if (formValidity === true) {
+                                document.forms[0].submit(); // submit form
+                            }
+                        }
+                    </code>
+                </pre>
+                <p class="note">Now we are reseting the formValidity when the user clicks the button. Only the validateRequiredInputs function should set this to false.</p>
+                <p class="note">Then we are calling the validateRequiredInputs function to check the form inputs.</p>
+                <p class="note">If the validateRequiredInputs function does not find empty inputs, the formValidity variable will remain true and the form will submit.</p>
+            </article>
+            
+            <article>
+                <h3>Download</h3>
+                <div class="steps"><a class="download" href="../_download/Form-Complete.zip">completed work-a-long files</a></div>
+                <p class="note">For reference</p>
+            </article>
+
+    </main>
+
+    <footer class="footer">
+        <img class="logo" src="../_images/SVG/Logo_White.svg" alt="logo">
+        <div class="ft-adrs">
+            <p>309-555-5555</p>
+            <p>Washington, IL</p>
+        </div>
+        <p>Site by Bobby Sherman</p>
+    </footer>
+
+    <!-- This next line is required to make the code light-up with syntax highlighting -->
+    <script>hljs.initHighlightingOnLoad();</script>   
+</body>
+</html>

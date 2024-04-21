@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--
+    GIT417: Lawncare About Page
+    Author: Bobby Sherman
+    Date:   8/22/21
+    -->
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Abott Co. | About</title>
+   <link rel="stylesheet" href="../_css/about.css">
+   
+   <!-- Modernizr Library -->
+   <script src="../_js/modernizr.custom.05819.js"></script>
+</head>
+
+<body id="about">
+    <header id="header" class="header">
+        <a class="logo-link" href="../index.html"><img class="logo" src="../_images/SVG/Logo_White.svg" alt="logo"></a>
+
+        <nav Class="nav-bar">
+            <ul Class="nav-ul">
+                <li Class="nav-li"><a class="home nav-link" href="../index.html">Home</a></li>
+                <li Class="nav-li"><a class="service nav-link" href="../_pages/service.html">Service</a></li>
+                <li Class="nav-li"><a class="about nav-link" href="../_pages/about.html">About</a></li>
+                <li Class="nav-li"><a class="contact nav-link" href="../_pages/contact.html">Contact</a></li>
+                <li Class="nav-li"><a class="security nav-link" href="../_pages/security.html">Security</a></li>
+                <li Class="nav-li"><a class="tutorial nav-link" href="../_pages/tutorial.html">Tutorial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>About</h1>
+        <section class="box-container">
+                <figure class="box"><img class="box-pic" src="../_images/about/team.jpg" alt="picture of the owners"></figure>
+                <article class="box">
+                    <h3>The Abott Brothers</h3>
+                    <p class="bio">
+                        We're just a bunch of guys who love a nice lawn. Who doesn't? A nice lawn in the backyard makes hosting better. Our favorite pass-time is playing yard games at one of our houses.
+                    </p>
+                </article>
+        </section>
+
+        <section class="box-container-2">
+            <h2>Let's here from the community</h2>
+            <p class="p-2">How do you use your lawn?</p>
+            <div class="box">
+                <form id="communityForm">
+                    <p class="p-form">Fill in the form to add your answer to the table!</p>
+                    <fieldset>
+                        <label class="form-titles" for="name">First Name</label>
+                        <input type="text" name="firstname" id="name">
+                    </fieldset>
+                
+                    <fieldset>
+                        <label class="form-titles" for="freq">How often are you in your yard?</label>
+                        <input type="text" name="frequency" id="freq">
+                    </fieldset>
+                
+                    <fieldset>
+                        <label class="form-titles" for="fav">What's your favorite way to enjoy a nice lawn?</label>
+                        <input type="text" name="favorite" id="fav">
+                    </fieldset>
+
+                    <input type="button" id="submitBtn" class="button" value="Submit">
+                </form>
+            </div class="box">
+
+            <article class="box">
+                <table id="communityTable">
+                    <tr>
+                        <th>First Name</th>
+                        <th>How often</th>
+                        <th>Favorite Use</th>
+                    </tr>
+                </table>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img class="logo" src="../_images/SVG/Logo_White.svg" alt="logo">
+        <div class="ft-adrs">
+            <p>309-555-5555</p>
+            <p>Washington, IL</p>
+        </div>
+        <p>Site by Bobby Sherman</p>
+    </footer>
+
+    <!-- link to javascript file -->
+    <script src="../_js/table.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--
+    GIT417: Lawncare service Page
+    Author: Bobby Sherman
+    Date:   8/22/21
+    -->
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Abott Co. | Services</title>
+   <link rel="stylesheet" href="../_css/service.css">
+   
+   <!-- Modernizr Library -->
+   <script src="../_js/modernizr.custom.05819.js"></script>
+</head>
+
+<body id="service">
+    <header id="header" class="header">
+        <a class="logo-link" href="../index.html"><img class="logo" src="../_images/SVG/Logo_White.svg" alt="logo"></a>
+
+        <nav Class="nav-bar">
+            <ul Class="nav-ul">
+                <li Class="nav-li"><a class="home nav-link" href="../index.html">Home</a></li>
+                <li Class="nav-li"><a class="service nav-link" href="../_pages/service.html">Service</a></li>
+                <li Class="nav-li"><a class="about nav-link" href="../_pages/about.html">About</a></li>
+                <li Class="nav-li"><a class="contact nav-link" href="../_pages/contact.html">Contact</a></li>
+                <li Class="nav-li"><a class="security nav-link" href="../_pages/security.html">Security</a></li>
+                <li Class="nav-li"><a class="tutorial nav-link" href="../_pages/tutorial.html">Tutorial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Services</h1>
+        <section class="section-1">
+
+            <div class="box-container">
+                <div class="box">
+                    <img class="box-pic" src="../_images/service/mower.jpg" alt="lawn mower">
+                </div>
+
+                <div class="box">
+                    <h3 class="h3-1">Lawn Mowing</h3>
+                    <ul class="box-list">
+                       <li>Professional fresh cut</li>
+                       <li>Edging and trimming</li>
+                       <li>Blow debris off sidewalks and patios</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="box-container">
+                <div class="box">
+                    <img class="box-pic" src="../_images/service/cleanup.jpg" alt="leaves in a yard">
+                </div>
+
+                <div class="box">
+                    <h3 class="h3-1">Yard Clean Up</h3>
+                        <ul class="box-list">
+                            <li>Remove leaves from landscape and lawn</li>
+                            <li>Pick up branches and debris from storms</li>
+                            <li>bag and transport to compost center</li>
+                        </ul>
+                </div>
+            </div>        
+
+
+            <div class="box-container">
+                <div class="box">
+                    <img class="box-pic" src="../_images/service/grass.jpg" alt="lawn">
+                </div>
+
+                <div class="box">
+                    <h3 class="h3-1">Lawn Treatment</h3>
+                        <ul class="box-list">
+                            <li>Crabgrass treatment</li>
+                            <li>Grub and insect treatment</li>
+                            <li>Weed treatment</li>
+                            <li>Fertilizer application</li>
+                            <li>Overseeding</li>
+                        </ul>
+                </div>
+            </div>
+
+
+            <div class="box-container">
+                <div class="box">
+                    <img class="box-pic" src="../_images/service/shovel.jpg" alt="shovel driveway">
+                </div>
+
+                <div class="box">
+                    <h3 class="h3-1">Snow Removal</h3>
+                        <ul class="box-list">
+                            <li>For 2" snowfall and above</li>
+                            <li>Shovel walkway and enterance</li>
+                            <li>Snow blow sidewalk</li>
+                            <li>Plow driveway</li>
+                            <li>Spread Salt</li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="content section-2">
+            <form class="form">
+                <h3 class="h2">Quick Quote</h3>
+                <p class="p-sub">For residential customers</p>
+
+                <fieldset id="dropdown" class="fieldset">
+                    <label class="form-titles">Select a service</label>
+                    <select class="dropdown" id="selectService">
+                        <option id="noSelection" value="" style="display: none;">Select Service</option>
+                        <option id="mowServ" value="60">Lawn Mowing</option>
+                        <option id="cleanServ" value="60">Yard Clean Up</option>
+                        <option id="treatServ" value="30">Lawn Treatment</option>
+                        <option id="snowServ" value="35">Snow Removal</option>
+                    </select>
+                </fieldset>
+
+                <fieldset id="radio-button" class="fieldset">
+                    <p class="form-titles">Select approximate size</p>
+
+                    <label class="radio-group">
+                        <input name="name" type="radio" class="radio" id="lrJob" value="4">Large
+                    </label>
+                    
+                    <label class="radio-group">
+                        <input name="name" type="radio" class="radio" id="avJob" value="2" checked>Average
+                    </label>
+
+                    <label class="radio-group">
+                        <input name="name" type="radio" class="radio" id="smJob" value="1">Small
+                    </label>
+                </fieldset>
+
+                <input type="button" id="btn_calc" value="Calculate" class="btn">
+
+                <p class="total">Total Estimate: <span class="quote" id="quote"></span></p>
+                <p class="p-note">Call 309-555-5555 for an official quote</p>
+                <p class="p-note">Commercial customers please call for a quote</p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img class="logo" src="../_images/SVG/Logo_White.svg" alt="logo">
+        <div class="ft-adrs">
+            <p>309-555-5555</p>
+            <p>Washington, IL</p>
+        </div>
+        <p>Site by Bobby Sherman</p>
+    </footer>
+    <!-- jQuery Library -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../_js/service.js"></script>
+</body>
+</html>

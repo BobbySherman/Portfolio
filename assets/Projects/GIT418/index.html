@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--
+    GIT417: Lawn care Home Page
+    Author: Bobby Sherman
+    Date:   8/22/21
+    -->
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Abott Co. | Home</title>
+   <link rel="stylesheet" href="_css/home.css">
+   
+   <!-- Modernizr Library -->
+   <script src="_js/modernizr.custom.05819.js"></script>
+</head>
+
+<body id="home">
+    <header id="header" class="header">
+        <a class="logo-link" href="index.html"><img class="logo" src="_images/SVG/Logo_White.svg" alt="logo"></a>
+
+        <nav Class="nav-bar">
+            <ul Class="nav-ul">
+                <li Class="nav-li"><a class="home nav-link" href="index.html">Home</a></li>
+                <li Class="nav-li"><a class="service nav-link" href="_pages/service.html">Service</a></li>
+                <li Class="nav-li"><a class="about nav-link" href="_pages/about.html">About</a></li>
+                <li Class="nav-li"><a class="contact nav-link" href="_pages/contact.html">Contact</a></li>
+                <li Class="nav-li"><a class="security nav-link" href="_pages/security.html">Security</a></li>
+                <li Class="nav-li"><a class="tutorial nav-link" href="_pages/tutorial.html">Tutorial</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="bg-img">
+            <section class="bg-ovr section-1">
+                <div class="pg-top">
+                    <h1>Abott Company</h1>
+                    <p>Your Washington yard maintenace professionals</p>
+                    <Button class="btn" onclick="window.location.href='_pages/contact.html'">Contact Us</Button>
+                </div>
+            </section>
+        </div>
+        
+        <section class="content section-2">
+            <h2>Services</h2>
+            <div class="box-container">
+                <div class="box"><h3>Lawn Mowing</h3><img class="box-pic" src="_images/home/mower.jpg" alt="lawn mower"></div>
+                <div class="box"><h3>Yard Clean Up</h3><img class="box-pic" src="_images/home/cleanup.jpg" alt="leaves in a yard"></div>
+                <div class="box"><h3>Lawn Treatment</h3><img class="box-pic" src="_images/home/grass.jpg" alt="lawn"></div>
+                <div class="box"><h3>Snow Removal</h3><img class="box-pic" src="_images/home/shovel.jpg" alt="shovel driveway"></div>
+            </div>
+        </section>
+
+        <section class="content section-3">
+            <h2>Reviews</h2>
+            <div class="box-container">
+                <div class="review"><p>&#8220;The team is very friendly! They even checked to make sure I was happy with the service!&#8221;</p><h4><br>Beth Smith</h4></div>
+                <div class="review"><p>&#8220;Professional and polite! I have been using Abott for 5 years! It's Been Great!&#8221;</p><h4><br>Sean Mars</h4></div>
+                <div class="review"><p>&#8220;The best experience I've had with a lawn maintenace company&#8221;</p><p><h4><br>Justin Fields</h4></div>
+            </div>
+        </section>
+
+        <section class="content section-4">
+            <h2 class="h2-s4">Quote</h2>
+
+            <div id="quoteRequest">
+                <form>
+                    <p>Fill out the form to request a quote!</p>
+                    <fieldset>
+                        <legend>Customer Info</legend>
+                        <label class="inputLabel">Name</label>
+                        <input type="text" class="infoInput">
+
+                        <label class="inputLabel">Phone Number</label>
+                        <input type="tel" class="infoInput">
+
+                        <label class="inputLabel">Email</label>
+                        <input type="email" class="infoInput">
+
+                        <label class="inputLabel">Street Address</label>
+                        <input type="text" class="infoInput">
+                    </fieldset>
+
+                    <fieldset>
+                    <legend>Services to Quote</legend>
+                        <label class="checkGroup">
+                            <input type="checkbox" class="checkbox" value="Lawn Mowing"> Lawn Mowing
+                        </label>
+
+                        <label class="checkGroup">
+                            <input type="checkbox" class="checkbox" value="Yard Cleanup"> Yard Cleanup
+                        </label>
+
+                        <label class="checkGroup">
+                            <input type="checkbox" class="checkbox" value="Lawn Treatment"> Lawn Treatment
+                        </label>
+
+                        <label class="checkGroup">
+                            <input type="checkbox" class="checkbox" value="Snow Removal"> Snow Removal
+                        </label>
+
+                        <label class="checkGroup">
+                            <input type="checkbox" class="checkbox" value="All Services"> All Services
+                        </label>
+                    </fieldset>
+
+                    <input type="button" id="submitBtn" value="Submit" class="btn">
+                </form>
+
+                <div id="reviewInfo">
+                    <p>Check your info before you submit!</p>
+                    <div>
+                        <h4 class="h4-s4">Customer Info</h4>
+                        <ul id="customerInfo"></ul>
+                    </div>
+                    <div>
+                        <h4 class="h4-s4">Services Selected</h4>
+                        <ul id="servicesSelected"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note-s4">
+                <p>Just looking?</p>
+                <p>Use the quick quote feature!</p>
+                <button class="btn" onclick="window.location.href='_pages/service.html'">Quick Quote</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <div id="gallery"></div>
+            <p id="source"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img class="logo" src="_images/SVG/Logo_White.svg" alt="logo">
+        <div class="ft-adrs">
+            <p>309-555-5555</p>
+            <p>Washington, IL</p>
+        </div>
+        <p>Site by Bobby Sherman</p>
+    </footer>
+
+    <!-- link to JS file -->
+    <script src="_js/home.js"></script>
+    <!-- Call to flickr service feed -->
+    <script src="https://www.flickr.com/services/feeds/photos_public.gne?jsoncallback=getPhotos&tags=lawn&format=json"></script>
+</body>
+</html>

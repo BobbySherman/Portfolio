@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--
+    GIT417: Lawncare Contact Page
+    Author: Bobby Sherman
+    Date:   8/22/21
+    -->
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Abott Co. | Contact</title>
+   <link rel="stylesheet" href="../_css/contact.css">
+   
+   <!-- Modernizr Library -->
+   <script src="../_js/modernizr.custom.05819.js"></script>
+</head>
+
+<body id="contact">
+    <header id="header" class="header">
+        <a class="logo-link" href="../index.html"><img class="logo" src="../_images/SVG/Logo_White.svg" alt="logo"></a>
+
+        <nav Class="nav-bar">
+            <ul Class="nav-ul">
+                <li Class="nav-li"><a class="home nav-link" href="../index.html">Home</a></li>
+                <li Class="nav-li"><a class="service nav-link" href="../_pages/service.html">Service</a></li>
+                <li Class="nav-li"><a class="about nav-link" href="../_pages/about.html">About</a></li>
+                <li Class="nav-li"><a class="contact nav-link" href="../_pages/contact.html">Contact</a></li>
+                <li Class="nav-li"><a class="security nav-link" href="../_pages/security.html">Security</a></li>
+                <li Class="nav-li"><a class="tutorial nav-link" href="../_pages/tutorial.html">Tutorial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="box-container">
+        <h1>Contact</h1>
+        <form class="box" id="contactForm" novalidate>
+            <div id="userMessage"></div>
+            <fieldset id="name">
+                <label class="form-titles" id="name-label">Name</label>
+                <div class="fieldMessage"></div>
+                <input type="text" class="name" name="fullName" placeholder="First and Last Name" required>
+            </fieldset>
+                
+            <fieldset id="email">
+                <label class="form-titles" id="email-label">Email</label>
+                <div class="fieldMessage"></div>
+                <input type="email" class="email" name="email" placeholder="youremail@email.com" required>
+            </fieldset>
+
+            <fieldset id="phoneNumber">
+                <label class="form-titles" id="phone-label">Phone Number</label>
+                <div class="fieldMessage"></div>
+                <div>
+                    <input type="number" class="phoneNumber" name="areaCode" maxlength="3" placeholder="555" required>
+                    <input type="number" class="phoneNumber" name="phoneGroup1" maxlength="3" placeholder="555" required>
+                    <input type="number" class="phoneNumber" name="phoneGroup2" maxlength="4" placeholder="5555" required>
+                </div>
+            </fieldset>
+
+            <div class="addressMessage"></div>
+            <fieldset id="addressOne" class="addressSet">
+                <label for="streetAddress" class="form-titles">Street Address</label>
+                <input id="streetAddress" name="" class="addressInput">
+            </fieldset>
+            <fieldset id="addressTwo" class="addressSet">
+                <label for="city" class="form-titles">City</label>
+                <input id="city" type="text" name="street" class="addressInput">
+            </fieldset>
+
+            <fieldset id="addressThree" class="addressSet">
+                <label for="state" type="text" class="form-titles">State</label>
+                <input id="state" type="text" name="state" class="addressInput">
+            </fieldset>
+
+            <fieldset id="addressFour" class="addressSet">
+                <label for="zip" class="form-titles">Zip</label>
+                <input id="zip" type="number" name="zip" class="addressInput">
+            </fieldset>
+
+            <fieldset id="reason">
+                <label class="form-titles" id="reason-label" for="dropdown">Reason for contacting us</label>
+                <div class="fieldMessage"></div>
+                <select id="dropdown" name="reason" required>
+                  <option disabled selected value="" style="display:none">Select Reason</option>
+                  <option value="Quote">Quote</option>
+                  <option value="Question">Question</option>
+                  <option value="Complaint">Complaint</option>
+                  <option value="Feedback">Feedback</option>
+                </select>
+            </fieldset>
+
+            <fieldset id="comments">
+                <label class="form-titles" for="commentsInput">Message <span>(400 character limit)</span></label>
+                <div class="fieldMessage"></div>
+                <textarea class="textarea" name="comments" placeholder="Enter your comments here..." id="commentsInput"></textarea>
+            </fieldset>
+                 
+            <input type="submit" id="submitBtn" class="button" value="submit">
+        </form>
+
+        <div class="box">
+            <h3>Hours</h3>
+            <p class="weekDay">Monday<span class="dayHours"></span></p>
+            <p class="weekDay">Tuesday<span class="dayHours"></span></p>
+            <p class="weekDay">Wednesday<span class="dayHours"></span></p>
+            <p class="weekDay">Thursday<span class="dayHours"></span></p>
+            <p class="weekDay">Friday<span class="dayHours"></span></p>
+            <p class="weekDay">Saturday<span class="dayHours"></span></p>
+            <p class="weekDay">Sunday<span class="dayHours"></span></p>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <img class="logo" src="../_images/SVG/Logo_White.svg" alt="logo">
+        <div class="ft-adrs">
+            <p>309-555-5555</p>
+            <p>Washington, IL</p>
+        </div>
+        <p>Site by Bobby Sherman</p>
+    </footer>
+        
+
+    <script src="../_js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--
+    GIT417: Lawncare Security Page
+    Author: Bobby Sherman
+    Date:   9/23/21
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>
+    <script src="https://cdn.maptiler.com/mapbox-gl-js/v1.5.1/mapbox-gl.js"></script>
+    <script src="https://cdn.maptiler.com/mapbox-gl-leaflet/latest/leaflet-mapbox-gl.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.maptiler.com/mapbox-gl-js/v1.5.1/mapbox-gl.css" />
+    <title>Abott Co. | Security</title>
+    <link rel="stylesheet" href="../_css/security.css">
+   
+    <!-- Modernizr Library -->
+    <script src="../_js/modernizr.custom.05819.js"></script>
+</head>
+
+<body id="security">
+    <header id="header" class="header">
+        <a class="logo-link" href="../index.html"><img class="logo" src="../_images/SVG/Logo_White.svg" alt="logo"></a>
+
+        <nav Class="nav-bar">
+            <ul Class="nav-ul">
+                <li Class="nav-li"><a class="home nav-link" href="../index.html">Home</a></li>
+                <li Class="nav-li"><a class="service nav-link" href="../_pages/service.html">Service</a></li>
+                <li Class="nav-li"><a class="about nav-link" href="../_pages/about.html">About</a></li>
+                <li Class="nav-li"><a class="contact nav-link" href="../_pages/contact.html">Contact</a></li>
+                <li Class="nav-li"><a class="security nav-link" href="../_pages/security.html">Security</a></li>
+                <li Class="nav-li"><a class="tutorial nav-link" href="../_pages/tutorial.html">Tutorial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Security</h1>
+        <section class="box-container">
+            <article class="box">
+                <h3>User Device Information</h3>
+                <dl class="dl">
+                    <dt class="dt navProp">Browser Version</dt>
+                    <dd class="dd userInfo"></dd>
+
+                    <dt class="dt navProp">Operating System</dt>
+                    <dd class="dd userInfo"></dd>
+
+                    <dt class="dt navProp">Connected to Network</dt>
+                    <dd class="dd userInfo"></dd>
+
+                    <dt class="dt navProp">Screen Color Depth</dt>
+                    <dd class="dd userInfo"></dd>
+
+                    <dt class="dt navProp">Screen Height</dt>
+                    <dd class="dd userInfo"></dd>
+
+                    <dt class="dt navProp">Screen Width</dt>
+                    <dd class="dd userInfo"></dd>
+                </dl>
+            </article>
+            <article class="box">
+                <h3>Security Tips</h3>
+                <dl class="dl">
+                    <dt class="dt">Diversify and secure your passwords</dt>
+                    <dd class="dd"><a class="secLink" href="https://www.pcmag.com/how-to/how-to-stay-anonymous-online" target="_blank">pcmag.com</a></dd>
+                    <dd class="dd">Use a dedicated service with an encrypted password vault.</dd>
+
+                    <dt class="dt">Keep Track of who's tracking you</dt>
+                    <dd class="dd"><a class="secLink" href="https://www.digitaltrends.com/web/how-to-browse-the-web-privately/" target="_blank">digitaltrends.com</a></dd>
+                    <dd class="dd">Use an extension like Privacy Badger (eff.org) to see where your information is going</dd>
+                    
+                    <dt class="dt">Think about your actions</dt>
+                    <dd class="dd"><a class="secLink" href="https://us.norton.com/internetsecurity-kids-safety-stop-stressing-10-internet-safety-rules-to-help-keep-your-family-safe-online.html" target="_blank">norton.com</a></dd>
+                    <dd class="dd">Think before you click on something and don't sign into sensitive websites on public networks</dd>
+                </dl>
+                <p class="secNote">Your privacy is your responsibility. Anonymous internet activity is very difficult to achieve. So watch your accounts, report suspicious activity, and keep your products updated.</p>
+            </article>
+        </section>
+
+        <section class="box-container">
+            <h2>Location</h2>
+            <div class="box">
+                <div id="map"></div>
+                <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
+            </div>
+            <div class="box">
+                <h3>User Location</h3>
+                <dl id="locationInfo" class="dl">
+                    <dt class="dt">Longitude</dt>
+                    <dd class="dd"></dd>
+                    <dt class="dt">Latitude</dt>
+                    <dd class="dd"></dd>
+                    <dt class="dt">Altitude</dt>
+                    <dd class="dd"></dd>
+                </dl>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img class="logo" src="../_images/SVG/Logo_White.svg" alt="logo">
+        <div class="ft-adrs">
+            <p>309-555-5555</p>
+            <p>Washington, IL</p>
+        </div>
+        <p>Site by Bobby Sherman</p>
+    </footer>
+
+    <script src="../_js/security.js"></script>
+</body>
+</html>
